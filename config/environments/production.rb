@@ -6,6 +6,8 @@ Rails.application.configure do
 
   config.public_file_server.enabled = true
 
+  config.action_cable.allowed_request_origins = ["103.253.146.220"]
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
