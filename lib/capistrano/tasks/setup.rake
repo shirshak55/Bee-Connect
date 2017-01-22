@@ -9,4 +9,8 @@ namespace :setup do
       end
     end
   end
+
+  task :reset_db do
+    run "cd #{current_path} && bundle exec rake db:reset RAILS_ENV=#{rails_env}"
+  end
 end
