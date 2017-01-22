@@ -1,3 +1,0 @@
-%li{class: "#{"notification-unread" if !notification.read_at?}"}
-  = link_to profile_path(notification.notifiable.user_name),class: 'dropdown-item' do
-    = "#{notification.actor.full_name} is following you at #{time_ago_in_words(notification.created_at)} ago"

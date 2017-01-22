@@ -1,4 +1,0 @@
-- if current_user_is_joined(user.id, university.id)
-  = link_to 'Leave This University',unjoin_university_path(university,user), remote: true,class: 'btn btn-danger flat_button',id: "join_university_#{university.id}",method: :post
-- else
-  = link_to 'Join This University',join_university_path(university,user), remote: true,class: 'btn btn-success flat_button',id: "join_university_#{university.id}",method: :post

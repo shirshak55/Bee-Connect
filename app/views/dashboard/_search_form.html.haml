@@ -1,5 +1,0 @@
-= form_tag("/search", method: "get",class: 'form-inline search-form') do
-  .form-group
-    = text_field_tag :username,nil, placeholder:"Search Username", class: 'form-control'
-  = button_tag(type: 'submit', id: "search-button", class: "btn btn-primary") do
-    %span{class: 'glyphicon glyphicon-search'}
