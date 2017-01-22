@@ -14,8 +14,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'redis', '~> 3.0'
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 group :development do
   gem 'sqlite3'
   gem 'meta_request'
