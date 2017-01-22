@@ -11,6 +11,12 @@ namespace :setup do
   end
 
   task :reset_db do
-    run "cd #{current_path} && bundle exec rake db:reset RAILS_ENV=#{rails_env}"
+    on roles(:app) do
+      within "#{current_path}" do
+        with rails_env: :production do
+          execute :rake, "db:reset"
+        end
+      end
+    end
   end
 end
