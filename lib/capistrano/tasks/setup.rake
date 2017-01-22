@@ -9,4 +9,13 @@ namespace :setup do
       end
     end
   end
+  task :reset_db do
+     on roles(:app) do
+       within "#{current_path}" do
+         with rails_env: :production do
+           execute :rake, "db:reset DISABLE_DATABASE_ENVIRONMENT_CHECK=1 "
+         end
+       end
+     end
+   end
 end
