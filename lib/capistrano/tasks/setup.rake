@@ -9,14 +9,4 @@ namespace :setup do
       end
     end
   end
-
-  task :reset_db do
-    on roles(:app) do
-      within "#{current_path}" do
-        with rails_env: :production do
-          execute :rake, "db:reset"
-        end
-      end
-    end
-  end
 end
