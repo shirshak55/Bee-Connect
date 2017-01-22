@@ -1,0 +1,17 @@
+.post-wrapper
+  .user_listings
+    -@users.where.not(id: current_user.id).each do |user|
+      .user
+        .user_head
+
+          = link_to 'Message', '#' ,class: 'start-conversation btn btn-danger follow-button flat__buttons',"data-sid" => current_user.id, "data-rip" => user.id
+          = render 'follow_and_unfollow_button' , :user => user 
+          .user_avatar
+            = post_avatar_select(user)
+          .user_username
+            = link_to user.user_name , profile_path(user.user_name)
+          .user_fullname
+            = user.full_name
+        .clear
+        .user_bio
+          = user.bio

@@ -1,0 +1,15 @@
+development:
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/development.sqlite3
+
+production:
+  adapter: postgresql
+  user: chatounce_admin
+  password: pgsql77
+  pool: 5
+  timeout: 5000
+  host: localhost
+  min_messages: WARNING
+  database: chat_ounce

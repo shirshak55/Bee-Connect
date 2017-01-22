@@ -1,0 +1,6 @@
+.post-wrapper
+  .post
+    .form-body
+      = render 'form',post: @post,postable:@postable
+      .text-center.edit-links
+        = link_to "Cancel", root_path,class: 'btn btn-primary'

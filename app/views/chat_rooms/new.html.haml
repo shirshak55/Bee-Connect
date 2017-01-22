@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-sm-8.col-offset-4
+      %article.post-wrapper
+      .post
+        .post-head
+          %h4 Add a Chat Room
+
+          = simple_form_for @chat_room do |f|
+            = f.input :title, autofocus: true, class: 'form-control'
+            = f.submit "Add!", class: 'btn btn-primary'

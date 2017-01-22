@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-sm-4
+      .conversation_box.list-group
+        %li.list-group-item
+          .chat_box_heading Conversations
+        %li
+          = render @conversations
+
+    .col-sm-8
+      %article.post-wrapper
+      .post
+        .post-head
+          %p Click on left to any conversation to chat

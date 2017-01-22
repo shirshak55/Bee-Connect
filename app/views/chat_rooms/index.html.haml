@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-sm-4
+      .chat_box.list-group
+        %li.list-group-item
+          .chat_box_heading Chat Room
+        %li.list-group-item
+          .text-center
+            = link_to 'New chat room', new_chat_room_path
+        %li
+          = render @chat_rooms
+
+    .col-sm-8
+      %article.post-wrapper
+      .post
+        .post-head
+          %p Join Chat Room To Start Sending Messages

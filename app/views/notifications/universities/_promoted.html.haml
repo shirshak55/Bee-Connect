@@ -1,0 +1,3 @@
+%li{class: "#{"notification-unread" if !notification.read_at?}"}
+  = link_to [notification.notifiable],class: 'dropdown-item' do
+    = "#{notification.actor.full_name} promoted you to moderator  #{notification.notifiable.name} university"

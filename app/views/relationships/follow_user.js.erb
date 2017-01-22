@@ -1,0 +1,3 @@
+$('#button-<%= @user.id %>').attr('class', 'btn btn-success unfollow-button flat__buttons')
+                   .text('Following')
+                   .attr('href', "/<%= @user.user_name %>/unfollow_user")

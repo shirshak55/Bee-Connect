@@ -1,0 +1,58 @@
+%article.post-wrapper
+  .post
+    .post-head
+      .post-user-thumbnail
+        = post_avatar_select(post.user)
+      .post-user-name
+        = link_to post.user.full_name, profile_path(post.user.user_name)
+        posted a new status
+        .time-ago
+          = time_ago_in_words post.created_at
+          ago
+      .clear
+      .attachment
+        .attachment-content
+          = post.content
+      .clear
+    .image.center-block
+      - if post.attachment.exists?
+        - if !(post.attachment.content_type =~ /^image/).nil?
+          .attachment-image
+            = image_tag (URI(request.url) + post.attachment.url), class:'img-responsive post__image'
+        - else
+          .attachment-info
+            File Name :
+            = post.attachment.instance.attachment_file_name
+            File Size (KB) :
+            = post.attachment.instance.attachment_file_size/1000
+
+          .attachment-files
+            = link_to "Download","#{URI(request.url) + post.attachment.url}",  class: "btn btn-success"
+
+    .view_post_bottom
+      = count_likers post.votes_for.up.by_type(User)
+      %span{class:'comment_counter'}
+        = count_comments post
+      = render 'posts/post_modifier_link',post: post
+    .post-bottom
+      = render 'posts/likes', post: post
+
+      .comments{id: "comments_#{post.id}"}
+        - if post.comments.any?
+          = render post.comments.order('created_at asc').first(4), {post: post,postable:postable}
+          - unless post.comments.count <= 4
+            .paginator{id: "#comments-paginator-#{post.id}"}
+              =link_to "View all #{post.comments.count} comments",[postable,post,:comments], remote: true, class: 'more-comments', id: "more_comments_#{post.id}", data: {post_id: "#{post.id}", type: "html", value: "#{post.comments.count}"}
+        - else
+          %p No comments
+    .comment-like-form.row
+      .like-button.col-xs-1
+        =liked_post post
+      .comment-form.col-xs-11
+        = form_for([postable,post, post.comments.build], remote: true) do |f|
+          = f.text_field :content, placeholder: 'Add a comment...',
+                                   class: "comment_content",
+                                   id: "comment_content_#{post.id}",
+                                   data: { post_id: "#{post.id}",'postable-type': "#{post.postable_type.underscore.pluralize}",'postable-id': "#{post.postable_id}",
+                                   value: "#{post.comments.count}" }
+          = f.submit 'New Comment', class: 'comment-submit-button'

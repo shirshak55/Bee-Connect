@@ -1,0 +1,15 @@
+.university-index-wrapper
+  %h2 Universities
+  -if current_user.role.name == 'admin'
+    = link_to 'New University', new_university_path,class:'btn btn-primary'
+  .div{style: 'clear:both'}
+  %br
+  - @universities.each do|university|
+    .university-index-box
+      .university-card
+        =link_to university_path(university) do
+          .university-card-thumbnail
+            = image_tag university.thumbnail_image.url(:original)
+          .university-card-details
+            .university-card-title
+              = university.name

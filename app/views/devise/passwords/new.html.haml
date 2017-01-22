@@ -1,0 +1,22 @@
+.registration-bg
+  .container
+    .row
+      .col-md-4.col-md-offset-8
+        .log-in.panel
+          .panel-heading
+            %h2 Forgot your password?
+          = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+            = f.error_notification
+            = devise_error_messages!
+            .panel-body
+              .form-inputs
+                = f.input :user_name, required: true, autofocus: true
+              .form-actions
+                = f.button :submit, "Send me reset password instructions"
+            %hr
+            = render "devise/shared/links"
+            %br
+            %hr
+            %p We will send you a link to reset password.
+            %p Please check in spam folder if you didn't get any emails from us.
+            %p If you still don't get email then please contact us.

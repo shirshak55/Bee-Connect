@@ -1,0 +1,17 @@
+- if post.errors.any?
+  #error_explanation
+    %h4
+      = pluralize(post.errors.count, "error")
+      prohibited this post from being saved:
+    %ul
+      - post.errors.full_messages.each do |message|
+        %li= message
+
+= simple_form_for [postable,post], html: { multipart: true } do |f|
+  = f.input :content, label: false, placeholder: 'Write your feelings...', input_html: { rows: 2 }
+  %label{class: 'btn btn-default btn-file'}
+    %span{class: 'glyphicon glyphicon-share'}
+    Upload 
+    = f.input :attachment, label: false,wrapper: false,input_html: { onChange: 'loadFile(event)' }
+  = f.button :submit, class: 'btn-success'
+= form_image_select(post)

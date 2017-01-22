@@ -1,0 +1,15 @@
+%li{class:  personal_message.user_id == personal_message.conversation.author_id ? "self" : "other"}
+  .avatar
+    = chat_avatar_select(personal_message.user)
+  .chatboxmessagecontent
+    %p= personal_message.body
+    - if personal_message.attachment.exists?
+      - if !(personal_message.attachment.content_type =~ /^image/).nil?
+        = link_to (image_tag (personal_message.attachment.url), class:'img-responsive'),personal_message.attachment.url,target: '_blank'
+      - else
+        = link_to personal_message.attachment.instance.attachment_file_name,personal_message.attachment.url
+
+    %time{:datetime => "#{personal_message.created_at}", :title => "#{personal_message.created_at.strftime("%d %b  %Y at %I:%M%p")}"}
+      = personal_message.user.user_name
+      = personal_message.created_at.strftime("%H:%M %p")
+

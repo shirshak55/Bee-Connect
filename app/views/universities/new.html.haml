@@ -1,0 +1,6 @@
+.post-wrapper
+  .post
+    .padding20
+      %h4 Creating New University:
+      = render 'form', university: @university
+      = link_to 'Back', universities_path,class: 'btn btn-primary'

@@ -1,0 +1,13 @@
+.comment
+  - if comment.user == current_user || current_user.role.name == 'admin'
+    = link_to [postable,post,comment], method: :delete, data: {postable:post.postable_type.underscore.pluralize,postable_id:post.postable.id,post_id: post.id, value: post.comments.count, confirm: "Are you sure?" }, remote: true, id: "delete-#{comment.id}", class: "delete-comment" do
+      %span(class="glyphicon glyphicon-remove delete-comment-icon")
+  .comment-user-thumnail
+    = comment_avatar_select(comment.user)
+  .comment-user-name
+    = link_to comment.user.full_name, profile_path(comment.user.user_name)
+    %span.time-ago
+      = time_ago_in_words comment.created_at
+      ago
+  .comment-content
+    = comment.content
