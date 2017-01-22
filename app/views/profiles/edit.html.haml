@@ -1,0 +1,25 @@
+.post-wrapper
+  .post
+    .post-body
+      .image-wrap
+        = simple_form_for @user, url: {action: "update"}, html: { multipart: true } do |f|
+          .row
+            .col-md-12
+              .form-group.text-center
+                %h4 Change your profile image:
+                .img-circle.avatar-image
+                  = profile_avatar_select(@user)
+                %h4 Update your bio:
+                %label{class: 'btn btn-default btn-file'}
+                  %span{class: 'glyphicon glyphicon-share'}
+                  Upload
+                  = f.input :avatar, label: false,wrapper: false,input_html: { onChange: 'loadFile(event)' }
+
+          %div{style: 'clear:both'}
+          .col-md-12
+            .form-group.text-center
+              %h4 Update your bio:
+              = f.input :bio, label: false, input_html: { rows: 4 }
+          .form-group.text-center
+            = f.button :submit, 'Update Profile', class: 'btn btn-success'
+            = link_to 'Edit Basic Info',edit_user_registration_path , class: "btn btn-primary"

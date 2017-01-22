@@ -1,0 +1,3 @@
+$('#button-<%= @user.id %>').text('Follow')
+                     .attr('class', 'btn btn-default follow-button flat__buttons')
+                     .attr('href', "/<%= @user.user_name %>/follow_user")

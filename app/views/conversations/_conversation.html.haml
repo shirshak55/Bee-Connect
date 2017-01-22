@@ -1,0 +1,10 @@
+%div{:class => 'conversation_list_item'}
+  = link_to  conversation_path(conversation) do
+    .conversation_list_item__image
+      = post_avatar_select(current_user)
+    .conversation_list_item__text
+      = link_to conversation.with(current_user).user_name,profile_path(conversation.with(current_user))
+      %br
+      .conversation_list_item__message
+        = conversation.personal_messages.last.body.truncate(50)
+    %div{style: 'clear:both'}

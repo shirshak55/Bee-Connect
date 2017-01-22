@@ -1,0 +1,3 @@
+$("#like_<%= @post.id %>").removeClass('glyphicon-heart-empty').addClass('glyphicon-heart');
+$("#like_<%= @post.id %>").removeAttr('href').attr('href', '<%= @post.postable_type.downcase.pluralize  %>/<%= @post.postable.id %>/posts/<%= @post.id %>/unlike');
+$("#likes_<%= @post.id %>").html("<%= j (render partial: 'posts/likes', locals: { post: @post} ) %>");

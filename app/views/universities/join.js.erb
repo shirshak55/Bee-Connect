@@ -1,0 +1,3 @@
+$('#join_university_<%= @university_id %>').attr('class', 'btn btn-danger flat__buttons')
+                   .text('Leave This University')
+                   .attr('href', "/universities/<%= @university_id %>/unjoin/<%= @user_id %>")

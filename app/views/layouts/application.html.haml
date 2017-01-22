@@ -1,0 +1,25 @@
+%html
+  %head
+
+    %title Chat Ounce
+
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %meta{:content => user_signed_in? ? current_user.id : "",:name=>'user-id'}
+
+    = stylesheet_link_tag    'application', media: 'all'
+
+    = javascript_include_tag 'application'
+
+    = csrf_meta_tags
+
+  %body
+    = render 'layouts/navbar'
+
+    -flash.each do |name, msg|
+      = content_tag :div, msg, class: [:alert, alert_for(name)]
+
+    = yield
+
+    = render 'layouts/footer'

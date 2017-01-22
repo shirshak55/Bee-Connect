@@ -1,0 +1,24 @@
+%header.chatboxhead
+  .chatboxtitle
+    = @conversation.with(current_user).user_name
+  .chatboxoptions
+    = link_to "<span class='glyphicon glyphicon-minus'></span> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id
+    = link_to "<span class='glyphicon glyphicon-remove'></span> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id
+
+  %br{:clear => "all"}
+
+.chatboxcontent
+  - if @conversation.personal_messages.any?
+    = render @conversation.personal_messages.order(created_at: :asc).reverse_order().limit(100)
+.chatboxinput
+  = form_for([@personal_message], :html => {id: "conversation_form_#{@conversation.id}"})  do |f|
+    = hidden_field_tag 'conversation_id', @conversation.id,class: 'conversation_id'
+    = f.text_area :body, class: 'chatboxtextarea',label: false,autofocus: true ,"data-cid" => @conversation.id
+
+  = simple_form_for([@personal_message], remote: true,:html => {multipart: true,id: "conversation_attachment_form_#{@conversation.id}"})  do |f|
+    = hidden_field_tag 'conversation_id', @conversation.id,class: 'conversation_id'
+    = hidden_field_tag 'personal_message[body]', "Uploaded File"
+    .personal_message_attachment
+      %span{class: "personal_attachment_upload glyphicon glyphicon-upload"}
+      = f.input :attachment,label: false,wrapper: false
+    %div{style: {clear: 'both'}}

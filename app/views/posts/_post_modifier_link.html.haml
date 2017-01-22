@@ -1,0 +1,8 @@
+- if post.postable_type == 'University'
+  - if moderation_links_and_power(post)
+    = link_to "Edit Post", [:edit,post.postable,post]
+    = link_to "Delete Post", [post.postable,post], method: :delete, data: { confirm: "Are you sure you want to delete others post?" }
+- else
+  -if post.user.id == current_user.id || current_user.role.name == 'admin'
+    = link_to "Edit Post", [:edit,post.postable,post]
+    = link_to "Delete Post", [post.postable,post], method: :delete, data: { confirm: "Are you sure you want to delete this post?" }

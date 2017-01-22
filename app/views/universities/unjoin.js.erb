@@ -1,0 +1,3 @@
+$('#join_university_<%= @university_id %>').attr('class', 'btn btn-success flat__buttons')
+                   .text('Join This University')
+                   .attr('href', "/universities/<%= @university_id %>/join/<%= @user_id %>")

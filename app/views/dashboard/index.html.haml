@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-sm-8
+      %main#posts
+        = render 'layouts/follower_suggestion',currently_logged_in_user: current_user
+        .post-wrapper
+          .post
+            .padding20
+              = render 'posts/form',post: @post,postable: current_user
+        = render 'posts/posts',posts: @posts,postable: current_user
+      #paginator.text-center
+        = link_to_next_page @posts, 'Load More', remote: true, id: 'load_more'
+    .col-sm-4
+      = render 'layouts/chat_box',followed_user: @followed_user

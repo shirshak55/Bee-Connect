@@ -1,0 +1,5 @@
+.dropdown.notification-dropdown{data: {behaviour: 'notifications'}}
+  %button.btn.btn-default.navbar__buttons.dropdown-toggle{ type: 'button', id: 'dropdownMenu1', data: { toggle: 'dropdown' }, 'aria-haspopup'=> true, 'aria-expanded'=> true }
+    %span{class: 'notifications-count', data: {behaviour: 'notifications-count'}}
+    %span.glyphicon.glyphicon-bell.colorb
+  %ul.dropdown-menu{ 'aria-labelledby'=> 'dropdownMenu1',data: {behaviour: 'notifications-item'}}

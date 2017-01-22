@@ -1,0 +1,4 @@
+- if current_user_is_following(current_user.id, user.id)
+  = link_to 'Following', unfollow_user_path(user.user_name), remote: true, class: 'btn btn-success unfollow-button flat__buttons', id: "button-#{user.id}", method: :post
+- else
+  = link_to 'Follow', follow_user_path(user.user_name), remote: true, class: 'btn btn-default follow-button flat__buttons', id: "button-#{user.id}", method: :post

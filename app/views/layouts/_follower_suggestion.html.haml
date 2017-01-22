@@ -1,0 +1,22 @@
+.post-wrapper
+  .post
+    .suggestion_box_heading
+      You may want to follow
+      .sugesstion_box_show_all.pull-right
+        = link_to "See All >" , all_users_path
+      .clear
+    %ul.suggestion_box_main
+      - ids = currently_logged_in_user.following.pluck(:id)
+      - if User.where.not(id: ids).where.not(id: currently_logged_in_user.id).limit(5).offset(rand(User.count)).each do|user|
+        %li
+          = render 'profiles/follow_and_unfollow_button' , :user => user
+          .user_info
+            = chat_avatar_select(user)
+            .suggestion_box_name
+              .suggestion_box_user_name
+                = user.user_name
+              .suggestion_box_full_name
+                = user.full_name
+          .clear
+        - end.empty?
+          %li You can check All users if you wanna follow someone :)

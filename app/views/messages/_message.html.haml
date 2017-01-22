@@ -1,0 +1,13 @@
+.card
+  .card-block
+    .row
+      .col-md-1
+        = post_avatar_select message.user
+      .col-md-11
+        %p.card-text
+          %span.text-muted
+            = message.user.user_name
+            #{time_ago_in_words(message.created_at)} ago says
+
+          %br
+          = message.body

@@ -1,0 +1,14 @@
+.chat_box.list-group
+  %li.list-group-item
+    .chat_box_heading Online Chat
+  %li.list-group-item
+    .text-center
+      =link_to "Follow Other User to Chat",all_users_path
+  - current_user.following.each do |user|
+    %li.list-group-item
+      =link_to "#", class: "start-conversation","data-sid" => current_user.id, "data-rip" => user.id do
+        .chat_avatar
+        = chat_avatar_select(user)
+        = user.full_name
+        .user_online_block
+          = online_status user
