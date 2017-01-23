@@ -4,6 +4,7 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
+
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
@@ -31,9 +32,10 @@ require 'capistrano/rails'
 require 'capistrano/passenger'
 
 require 'capistrano/rbenv'
-require 'capistrano/sidekiq'
 set :rbenv_type, :user
 set :rbenv_ruby, '2.4.0'
 
+require 'capistrano/sidekiq'
+set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }

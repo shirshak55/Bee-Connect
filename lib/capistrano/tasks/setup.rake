@@ -18,4 +18,14 @@ namespace :setup do
        end
      end
    end
+
+   task :console do
+      on roles(:app) do
+        within "#{current_path}" do
+          with rails_env: :production do
+            execute :rails, "console"
+          end
+        end
+      end
+    end
 end

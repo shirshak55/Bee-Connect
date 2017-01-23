@@ -9,7 +9,9 @@ admin_user = {email:  'admin@admin.com',
               last_name:  "Admin",
               user_name:  "Administrator",
               bio: "Admin is the super user",
-              is_female: false
+              is_female: false,
+              :confirmed_at => DateTime.now
             }
+a.skip_confirmation!
 a  = Role.where(name: 'admin').first.users.build(admin_user)
 a.save!
