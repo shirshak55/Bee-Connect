@@ -9,7 +9,7 @@
 
 .chatboxcontent
   - if @conversation.personal_messages.any?
-    = render @conversation.personal_messages.order(created_at: :asc).reverse_order().limit(100)
+    = render @conversation.personal_messages.order(created_at: :asc).last(100)
 .chatboxinput
   = form_for([@personal_message], :html => {id: "conversation_form_#{@conversation.id}"})  do |f|
     = hidden_field_tag 'conversation_id', @conversation.id,class: 'conversation_id'

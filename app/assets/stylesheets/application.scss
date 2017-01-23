@@ -150,6 +150,9 @@ body {
 .search-form #username{
   width:360px
 }
+#root{
+  min-height: 91.4%;
+}
 /*
 |--------------------------------------------------------------------------
 |   Navbar
@@ -377,7 +380,7 @@ body {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height:83%
+  min-height: 83.7%;
 }
 .log-in{
   margin-left: auto;
