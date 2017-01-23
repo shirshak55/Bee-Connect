@@ -36,6 +36,8 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.4.0'
 
 require 'capistrano/sidekiq'
-set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
+set :sidekiq_queue , [:default,:mailers]
+set :sidekiq_config, -> { File.join(shared_path, 'config', 'sidekiq.yml') }
+
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
