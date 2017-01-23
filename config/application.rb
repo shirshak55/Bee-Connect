@@ -14,7 +14,7 @@ module Kubh
     ActionMailer::Base.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'gmail.com',
+      domain:               '103.253.146.220:80',
       user_name:            'bloggervista@gmail.com',
       password:             'lovegod757',
       authentication:       :plain,
