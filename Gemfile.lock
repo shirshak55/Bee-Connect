@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/seuros/capistrano-sidekiq.git
+  revision: 339c42e24f42d8d72173daae832b23504930f941
+  specs:
+    capistrano-sidekiq (0.10.0)
+      capistrano
+      sidekiq (>= 3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -255,6 +263,7 @@ DEPENDENCIES
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.2)
   capistrano-rbenv (~> 2.1)
+  capistrano-sidekiq!
   coffee-rails (~> 4.2)
   devise
   haml
