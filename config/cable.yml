@@ -6,9 +6,8 @@ development: &development
   :inline: true
 test: *development
 production: &production
-  :url: redis://{redis_host}:{redis_port}/
+  :url: redis://localhost:6379
   :host: {redis_host}
   :port: {redis_port}
-  :password: {redis_password}
   :inline: true
   :timeout: 1
