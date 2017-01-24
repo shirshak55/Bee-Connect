@@ -12,6 +12,6 @@ admin_user = {email:  'chatounce98@gmail.com',
               is_female: false,
               :confirmed_at => DateTime.now
             }
-admin_user.skip_confirmation!
-admin_user  = Role.where(name: 'admin').first.users.build(admin_user)
-admin_user.save!
+a  = Role.where(name: 'admin').first.users.build(admin_user)
+a.skip_confirmation!
+a.save!
