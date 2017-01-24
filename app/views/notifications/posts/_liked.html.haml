@@ -2,3 +2,5 @@
   - if notification.notifiable.exists?
     = link_to [notification.notifiable.postable,notification.notifiable],class: 'dropdown-item' do
       = "#{notification.actor.full_name} likes your post"
+  - else
+    = notification.destroy

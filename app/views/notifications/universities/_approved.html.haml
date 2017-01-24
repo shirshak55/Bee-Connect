@@ -1,3 +1,6 @@
 %li{class: "#{"notification-unread" if !notification.read_at?}"}
-  = link_to [notification.notifiable],class: 'dropdown-item' do
-    = "#{notification.actor.full_name} approved you at  #{notification.notifiable.name} university"
+  - if notification.notifiable.exists?
+    = link_to [notification.notifiable],class: 'dropdown-item' do
+      = "#{notification.actor.full_name} approved you at  #{notification.notifiable.name} university"
+  - else
+    = notification.destroy
