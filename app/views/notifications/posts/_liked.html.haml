@@ -1,5 +1,5 @@
 %li{class: "#{"notification-unread" if !notification.read_at?}"}
-  - if notification.notifiable.exists?
+  - if notification.notifiable.present?
     = link_to [notification.notifiable.postable,notification.notifiable],class: 'dropdown-item' do
       = "#{notification.actor.full_name} likes your post"
   - else

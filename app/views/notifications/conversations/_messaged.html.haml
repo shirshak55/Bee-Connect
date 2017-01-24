@@ -1,5 +1,5 @@
 %li{class: "#{"notification-unread" if !notification.read_at?}"}
-  - if notification.notifiable.exists?
+  - if notification.notifiable.present?
     = link_to '#',"data-sid" => notification.notifiable.author_id, "data-rip" => notification.notifiable.receiver_id,class: 'dropdown-item start-conversation' do
       = "#{notification.actor.full_name} messaged you at #{time_ago_in_words(notification.created_at)} ago"
   - else
