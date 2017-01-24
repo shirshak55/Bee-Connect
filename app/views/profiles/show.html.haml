@@ -20,6 +20,7 @@
                                     class: 'btn edit-button flat__buttons'
         - else
           = render 'follow_and_unfollow_button',user: @user
+          = link_to 'Message', '#' ,class: 'start-conversation btn btn-danger follow-button flat__buttons',"data-sid" => current_user.id, "data-rip" => @user.id
 
 
 -@posts.each do |post|
