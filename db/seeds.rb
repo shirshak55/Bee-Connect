@@ -5,9 +5,9 @@ end
 admin_user = {email:  'chatounce98@gmail.com',
               password_confirmation: 'chatounce@',
               password:  'chatounce@',
-              first_name: "Admin",
-              last_name:  "Admin",
-              user_name:  "Administrator",
+              first_name: "Chat",
+              last_name:  "Ounce",
+              user_name:  "ChatOunce",
               bio: "Admin is the super user",
               is_female: false,
               :confirmed_at => DateTime.now
