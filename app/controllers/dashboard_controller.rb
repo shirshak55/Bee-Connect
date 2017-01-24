@@ -9,7 +9,7 @@ class DashboardController < ApplicationController
       flash[:danger] = "No search as given"
       redirect_to root_path
     end
-    @result = User.search_name(params[:username]);
+    @result = User.search_name(params[:username].downcase);
     puts "__________________________________________________________________"
     puts params[:username]
     puts @result
