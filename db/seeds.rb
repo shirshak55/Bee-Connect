@@ -2,9 +2,9 @@
   Role.find_or_create_by({name: role})
 end
 
-admin_user = {email:  'admin@admin.com',
-              password_confirmation: 'admin123',
-              password:  'admin123',
+admin_user = {email:  'chatounce98@gmail.com',
+              password_confirmation: 'chatounce@',
+              password:  'chatounce@',
               first_name: "Admin",
               last_name:  "Admin",
               user_name:  "Administrator",
@@ -12,6 +12,6 @@ admin_user = {email:  'admin@admin.com',
               is_female: false,
               :confirmed_at => DateTime.now
             }
-a.skip_confirmation!
-a  = Role.where(name: 'admin').first.users.build(admin_user)
-a.save!
+admin_user.skip_confirmation!
+admin_user  = Role.where(name: 'admin').first.users.build(admin_user)
+admin_user.save!
