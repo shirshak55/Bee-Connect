@@ -1,5 +1,5 @@
 class MessageBroadcastJob < ApplicationJob
-  queue_as :default
+  queue_as :high_priority
 
   def perform(message)
     ActionCable.server.broadcast "chat_rooms_#{message.chat_room.id}_channel",
@@ -7,7 +7,6 @@ class MessageBroadcastJob < ApplicationJob
   end
 
   private
-
   def render_message(message)
     MessagesController.render partial: 'messages/message', locals: {message: message}
   end

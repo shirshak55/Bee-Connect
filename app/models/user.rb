@@ -106,7 +106,7 @@ class User < ActiveRecord::Base
   end
 
   scope :users_to_be_followed, ->(user) { where(following: user) }
-  scope :search_name, -> (name) { where("user_name like ?", "%#{name.downcase}%")}
+  scope :search_name, -> (name) { where("lower(user_name) like ?", "%#{name}%")}
 
   private
   def set_default_role

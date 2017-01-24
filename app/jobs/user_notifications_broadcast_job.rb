@@ -1,5 +1,5 @@
 class UserNotificationsBroadcastJob < ApplicationJob
-  queue_as :default
+  queue_as :high_priority
 
   def perform(notification)
     ActionCable.server.broadcast "user_notifications_#{notification.recipient_id}_channel",notify: true

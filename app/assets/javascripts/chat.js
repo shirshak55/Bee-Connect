@@ -59,41 +59,7 @@ var ready = function() {
 
         },
 
-        /**
-         * Takes in two parameters. It is responsible for fetching the specific conversation's
-         * html page and appending it to the body of our home page e.g if conversation_id = 1
-         *
-         * $.get("conversations/1, function(data){
-         *    // rest of the logic here
-         * }, "html")
-         *
-         * @param conversation_id
-         * @param minimizeChatBox
-         */
-
         createChatBox: function(conversation_id, minimizeChatBox) {
-
-            App.personal_chat = App.cable.subscriptions.create({
-              channel: "ConversationNotificationsChannel",
-              conversation_id : conversation_id
-            }, {
-              send_message: function(message, conversation_id) {
-                return this.perform('send_message', {
-                  message: message,
-                  conversation_id: conversation_id
-                });
-              },
-              connected: function() {},
-              disconnected: function() {},
-              received: function(data) {
-                if(data['message_user_id']==$('meta[name=user-id]').attr("content")){
-                    $("#chatbox_" + conversation_id + " .chatboxcontent").append('<li class="self">'+data['message']+'</li>');
-                }else{
-                    $("#chatbox_" + conversation_id + " .chatboxcontent").append('<li class="other">'+data['message']+'</li>');
-                }
-                 $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
-              }
-            });
             if ($("#chatbox_" + conversation_id).length > 0) {
                 if ($("#chatbox_" + conversation_id).css('display') == 'none') {
                     $("#chatbox_" + conversation_id).css('display', 'block');
@@ -102,6 +68,25 @@ var ready = function() {
                 $("#chatbox_" + conversation_id + " .chatboxtextarea").focus();
                 return;
             }
+            App.personal_chat = App.cable.subscriptions.create({
+                channel: "ConversationChannel",
+                conversation_id: conversation_id
+            }, {
+                send_message: function(message, conversation_id) {
+                    return this.perform('send_message', {
+                        message: message,
+                        conversation_id: conversation_id
+                    });
+                },
+                received: function(data) {
+                    if (data['message_user_id'] == $('meta[name=user-id]').attr("content")) {
+                        $("#chatbox_" + conversation_id + " .chatboxcontent").append('<li class="self">' + data['message'] + '</li>');
+                    } else {
+                        $("#chatbox_" + conversation_id + " .chatboxcontent").append('<li class="other">' + data['message'] + '</li>');
+                    }
+                    $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
+                }
+            });
 
             $("body").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
 
@@ -311,7 +296,7 @@ var ready = function() {
 
 $(document).ready(ready);
 //$(document).on("page:load", ready);
-var ready = function () {
+var ready = function() {
 
     /**
      * When the send message link on our home page is clicked
@@ -319,14 +304,16 @@ var ready = function () {
      * receiver_id
      */
 
-    $(document).on('click','.start-conversation',function (e) {
+    $(document).on('click', '.start-conversation', function(e) {
         e.preventDefault();
 
         var author_id = $(this).data('sid');
         var receiver_id = $(this).data('rip');
-        console.log("/conversations_api")
 
-        $.post("/conversations_api", { author_id: author_id, receiver_id: receiver_id }, function (data) {
+        $.post("/conversations_api", {
+            author_id: author_id,
+            receiver_id: receiver_id
+        }, function(data) {
             chatBox.chatWith(data.conversation_id);
         });
     });
@@ -335,7 +322,7 @@ var ready = function () {
      * Used to minimize the chatbox
      */
 
-    $(document).on('click', '.toggleChatBox', function (e) {
+    $(document).on('click', '.toggleChatBox', function(e) {
         e.preventDefault();
 
         var id = $(this).data('cid');
@@ -346,7 +333,7 @@ var ready = function () {
      * Used to close the chatbox
      */
 
-    $(document).on('click', '.closeChat', function (e) {
+    $(document).on('click', '.closeChat', function(e) {
         e.preventDefault();
 
         var id = $(this).data('cid');
@@ -359,7 +346,7 @@ var ready = function () {
      * chatInputKey in chat.js for inspection
      */
 
-    $(document).on('keydown', '.chatboxtextarea', function (event) {
+    $(document).on('keydown', '.chatboxtextarea', function(event) {
         var id = $(this).data('cid');
         chatBox.checkInputKey(event, $(this), id);
     });
@@ -369,7 +356,7 @@ var ready = function () {
      * conversation chatbox
      */
 
-    $('a.conversation').click(function (e) {
+    $('a.conversation').click(function(e) {
         e.preventDefault();
 
         var conversation_id = $(this).data('cid');
@@ -380,8 +367,8 @@ var ready = function () {
 $(document).ready(ready);
 //$(document).on("page:load", ready);
 
-$(document).on('ready', function(){
-  $(document).on('change', 'input[name="personal_message[attachment]"]',function(){
-    $(this).parents("form:first").submit();
-  });
+$(document).on('ready', function() {
+    $(document).on('change', 'input[name="personal_message[attachment]"]', function() {
+        $(this).parents("form:first").submit();
+    });
 });

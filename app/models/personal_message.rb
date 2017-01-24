@@ -8,6 +8,6 @@ class PersonalMessage < ApplicationRecord
 
   after_create_commit do
     conversation.touch
-    ConversationNotificationJob.perform_later(self)
+    ConversationJob.perform_later(self)
   end
 end
