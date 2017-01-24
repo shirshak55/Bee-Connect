@@ -3,7 +3,7 @@ Rails.application.configure do
 
   config.public_file_server.enabled = true
 
-  config.action_cable.allowed_request_origins = ["103.253.146.220"]
+  config.action_cable.allowed_request_origins = ["http://chatounce.com","https://chatounce.com"]
 
   config.eager_load = true
 
@@ -46,5 +46,5 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => '103.253.146.220' }
+  config.action_mailer.default_url_options = { :host => 'http://chatounce.com' }
 end

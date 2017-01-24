@@ -48,8 +48,7 @@ class User < ActiveRecord::Base
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
 
-  has_many :university_memberships
-  has_many :university_groups,through: :university_memberships
+  has_many :university_memberships, dependent: :destroy
 
   has_many :university_messages ,dependent: :destroy
 
