@@ -14,7 +14,7 @@
             = chat_avatar_select(user)
             .suggestion_box_name
               .suggestion_box_user_name
-                = user.user_name
+                = link_to user.user_name , profile_path(user.user_name)
               .suggestion_box_full_name
                 = user.full_name
           .clear
