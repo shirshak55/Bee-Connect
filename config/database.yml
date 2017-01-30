@@ -7,10 +7,9 @@ development:
 production:
   adapter: mysql2
   encoding: utf8
-  user: laxman
-  password: chatouncem*
-  pool: 5
-  timeout: 5000
-  host: localhost
-  min_messages: WARNING
+  reconnect: false
   database: chatounce_production
+  pool: 5
+  username: laxman
+  password: chatouncem*
+  socket: /tmp/mysql.sock
