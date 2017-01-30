@@ -16,12 +16,6 @@ Rails.application.configure do
   config.assets.compile = false
 
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
-  config.static_cache_control = 'public, max-age=1000'
-
-  config.public_file_server.headers = {
-    'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
-    'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
-  }
 
   # config.force_ssl = true
 
