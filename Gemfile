@@ -23,7 +23,7 @@ group :development do
   gem "awesome_print", require:"ap"
 end
 group :production do
-  gem 'pg'
+  gem 'mysql2', '~> 0.4.5'
 end
 
 gem 'haml'
@@ -37,11 +37,4 @@ gem 'kaminari'
 gem 'rails_admin'
 
 gem 'remotipart', '~> 1.2'
-
-gem 'capistrano', '~> 3.7', '>= 3.7.1'
-gem 'capistrano-rails', '~> 1.2'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rbenv', '~> 2.1'
-
 gem 'sidekiq'
-gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'

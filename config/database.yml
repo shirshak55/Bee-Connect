@@ -5,11 +5,12 @@ development:
   database: db/development.sqlite3
 
 production:
-  adapter: postgresql
-  user: chatounce_admin
-  password: pgsql77
+  adapter: mysql2
+  encoding: utf8
+  user: laxman
+  password: chatouncem*
   pool: 5
   timeout: 5000
   host: localhost
   min_messages: WARNING
-  database: chat_ounce
+  database: chatounce_production
