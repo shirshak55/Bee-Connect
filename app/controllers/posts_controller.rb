@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "The given post has been created!"
       if(@post.postable_type == 'User')
-        redirect_to profile_path(current_user.user_name)
+        redirect_to root_path
       else
         redirect_to @postable
       end
