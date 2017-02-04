@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   validates :user_id, presence: true
+  validates :content, presence: true, unless: ->(user){user.attachment.present?}
+  validates :attachment, presence: true, unless: ->(user){user.content.present?}
   validates :content, length: { maximum: 5000 }
 
   has_attached_file :attachment
