@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   validates :user_id, presence: true
-  validates :content, length: { minimum: 3, maximum: 300 }
+  validates :content, length: { minimum: 1, maximum: 5000 }
 
   has_attached_file :attachment
   do_not_validate_attachment_file_type :attachment

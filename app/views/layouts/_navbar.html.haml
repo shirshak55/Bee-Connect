@@ -5,7 +5,7 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    = link_to image_tag("logo.png", border: 0), root_path , class: 'navbar-brand'
+    = link_to "Home", root_path , class: 'navbar-brand'
     - if user_signed_in?
       = link_to  current_user.full_name, profile_path(current_user.user_name), class: 'navigation_box'
   .collapse.navbar-collapse#bs-navbar-collapse-1
