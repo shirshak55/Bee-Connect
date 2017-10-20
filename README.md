@@ -85,6 +85,27 @@ password: chatounce@
 ```
 * Go to your lovely browser and start using this project
 
+* To run tests:
+```bash
+#!bash
+bin/rake
+```
+
+* To look at the coverage results:
+```bash
+#!bash
+bin/bundle exec rake brakeman:run && open brakeman-report.html
+bin/bundle exec metric_fu #--no-open
+bin/bundle exec rake && open coverage/index.html
+```
+
+* Before committing code into the repository, please ensure that the tests all run successfully, and also that the following commands do not error out (the CI process will run these and cause build failures if you forget to do so)
+```bash
+#!bash
+bin/bundle exec rake bundler:audit
+```
+
+
 
 ### Tips
 Use c9 (cloud 9) for testing so you can feel how much effort have been devoured in making it.

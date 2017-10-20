@@ -23,13 +23,21 @@ group :development do
   gem 'meta_request'
   gem 'web-console'
   gem "awesome_print", require:"ap"
+  gem 'rack-mini-profiler', '~> 0.10.1'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
+  gem 'bullet', '~> 5.6'
+  gem 'bundler-audit', '~> 0.6', require: false
 end
 
 group :test do
+  gem 'rubocop', '~> 0.49', require: false
+  gem 'rubocop-rspec', '~> 1.12', require: false
+  gem 'brakeman', '~> 3.5', require: false
+  gem 'metric_fu', '~> 4.12.0', require: false
+
   gem 'fuubar', '~> 2.2.0'
   gem 'database_cleaner', '~> 1.6'
   gem 'factory_girl_rails', '~> 4.6'
