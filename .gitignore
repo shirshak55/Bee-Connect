@@ -23,3 +23,5 @@
 
 .DS_Store
 Passwords.txt
+
+/coverage/

@@ -44,7 +44,7 @@ An advance rails user interaction system. Think like its is mini facebook with l
 ## Installation
 
 
-### Devlopment
+### Development
 For development we use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
 
 * For windows user you can install imagemagic and add to path and also remember to install redis server on windows. For ubuntu you can follow the guide.

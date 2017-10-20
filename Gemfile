@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.4.1'
+
 gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -22,6 +24,20 @@ group :development do
   gem 'web-console'
   gem "awesome_print", require:"ap"
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.6'
+end
+
+group :test do
+  gem 'fuubar', '~> 2.2.0'
+  gem 'database_cleaner', '~> 1.6'
+  gem 'factory_girl_rails', '~> 4.6'
+  gem 'faker', '~> 1.7'
+  gem 'shoulda', '~> 3.5.0'
+  gem 'simplecov', '~> 0.14', require: false
+end
+
 group :production do
   gem 'mysql2', '~> 0.4.5'
 end
