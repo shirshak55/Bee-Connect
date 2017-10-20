@@ -14,9 +14,9 @@ module Kubh
     ActionMailer::Base.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'chatounce.com',
-      user_name:            'chatounce98@gmail.com',
-      password:             'chatounce@',
+      domain:               'ayz.com',
+      user_name:            'asd@gmail.com',
+      password:             'asd@',
       authentication:       :plain,
       enable_starttls_auto: true
     }
