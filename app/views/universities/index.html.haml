@@ -1,15 +1,15 @@
-.university-index-wrapper
-  %h2 Universities
+.group-index-wrapper
+  %h2 Groups
   -if current_user.role.name == 'admin'
-    = link_to 'New University', new_university_path,class:'btn btn-primary'
+    = link_to 'New Group', new_group_path,class:'btn btn-primary'
   .div{style: 'clear:both'}
   %br
-  - @universities.each do|university|
-    .university-index-box
-      .university-card
-        =link_to university_path(university) do
-          .university-card-thumbnail
-            = image_tag university.thumbnail_image.url(:original)
-          .university-card-details
-            .university-card-title
-              = university.name
+  - @groups.each do|group|
+    .group-index-box
+      .group-card
+        =link_to group_path(group) do
+          .group-card-thumbnail
+            = image_tag group.thumbnail_image.url(:original)
+          .group-card-details
+            .group-card-title
+              = group.name

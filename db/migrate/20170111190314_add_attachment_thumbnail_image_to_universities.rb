@@ -1,11 +1,11 @@
-class AddAttachmentThumbnailImageToUniversities < ActiveRecord::Migration
+class AddAttachmentThumbnailImageToGroups < ActiveRecord::Migration
   def self.up
-    change_table :universities do |t|
+    change_table :groups do |t|
       t.attachment :thumbnail_image
     end
   end
 
   def self.down
-    remove_attachment :universities, :thumbnail_image
+    remove_attachment :groups, :thumbnail_image
   end
 end

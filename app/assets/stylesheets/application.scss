@@ -315,7 +315,7 @@ body {
 |   Univeristy
 |--------------------------------------------------------------------------
 */
-.university-index-wrapper{
+.group-index-wrapper{
   background:#fafafa;
   padding:10px;
   margin: 40px auto 20px;
@@ -323,31 +323,31 @@ body {
   max-width:700px;
   border:1px solid #aaa;
 }
-.university-show-wrapper{
+.group-show-wrapper{
   max-width:1100px;
   margin:0 auto;
 }
-.university_timeline_image {
+.group_timeline_image {
   width:100%
 }
-.university-index-box{
+.group-index-box{
   width:200px;
   display:inline-block;
   margin-right:20px
 }
-.university-index-box:last{
+.group-index-box:last{
   margin-right:0
 }
-.university-card-thumbnail img{
+.group-card-thumbnail img{
   width:200px;
   height:200px;
 }
-.university-card{
+.group-card{
   position:relative;
   font-size:150%;
   text-align:center
 }
-.university-index-box a,.university-index-box a:hover{
+.group-index-box a,.group-index-box a:hover{
   color:black;
   cursor:pointer;
   text-decoration:none;
@@ -737,7 +737,7 @@ body {
 .chatboxtitle {
     float: left;
 }
-#messages,#university_messages{
+#messages,#group_messages{
   max-height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;

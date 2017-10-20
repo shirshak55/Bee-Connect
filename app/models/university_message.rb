@@ -1,8 +1,8 @@
-class UniversityMessage < ApplicationRecord
+class GroupMessage < ApplicationRecord
   belongs_to :user
-  belongs_to :university
+  belongs_to :group
 
   validates :body, presence: true, length: {minimum: 2, maximum: 1000}
 
-  after_create_commit { UniversityMessageBroadcastJob.perform_later(self) }
+  after_create_commit { GroupMessageBroadcastJob.perform_later(self) }
 end

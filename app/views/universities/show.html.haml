@@ -1,27 +1,27 @@
-.university-show-wrapper
-  .university-timeline
-    = link_to (image_tag @university.timeline_image.url(:original), class: 'university_timeline_image' ),universities_path(@university)
+.group-show-wrapper
+  .group-timeline
+    = link_to (image_tag @group.timeline_image.url(:original), class: 'group_timeline_image' ),groups_path(@group)
   .container-fluid
     .row
       .col-sm-8
         = render 'common_links'
-        - if current_user.is_university_approved(@university.id)
+        - if current_user.is_group_approved(@group.id)
           %main#posts
             .post-wrapper
               .post
                 .padding20
-                  = render 'posts/form',{post: @post,postable: @university}
-            = render 'posts/posts',{posts: @posts,postable: @university}
+                  = render 'posts/form',{post: @post,postable: @group}
+            = render 'posts/posts',{posts: @posts,postable: @group}
           #paginator.text-center
             = link_to_next_page @posts, 'Load More', remote: true, id: 'load_more'
         - else
-          = render 'join_university'
+          = render 'join_group'
       .col-sm-4
         .post-wrapper
-          = render 'join_and_unjoin_button',university:@university,user:current_user
-          - if current_user.is_university_approved(@university.id)
+          = render 'join_and_unjoin_button',group:@group,user:current_user
+          - if current_user.is_group_approved(@group.id)
             .post-wrapper
               .post
                 .post-head
                   %h4 Description
-                  = @university.description
+                  = @group.description

@@ -26,7 +26,7 @@ An advance rails user interaction system. Think like its is mini facebook with l
 * Ability to post
 * Ability To follow
 * Live Chat with file attachments
-* Group Support (Called University)
+* Group Support
 * Ability to Search Username
 * Good Pagination
 * User Profiles
@@ -104,5 +104,5 @@ I will always support this project but if you need more premium service you can 
 If you discover any security related issue, please email `bloggervista@gmail.com` .
 
 ## Donation
-Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of apperciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly ping me at `bloggervista@gmail.com` . 
+Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly ping me at `bloggervista@gmail.com` .
 If you are bitcoin user you can send me donations at blockchain `1NJb7cqYqP3nbR5WDjdaVvaduXfg8KEsHG` or `ether` at `0xA583445Acf22604219037D31f2D163B877DAad08`
