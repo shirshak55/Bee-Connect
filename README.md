@@ -16,7 +16,7 @@ An advance rails user interaction system. Think like its is mini facebook with l
 ![Notifications](/screenshots/notifications.png)
 
 ### Update Profile Page
-![Update Profile](/screenshots/updatng_profile.png)
+![Update Profile](/screenshots/update_profile.png)
 
 ## Features
 * Login/Logout
