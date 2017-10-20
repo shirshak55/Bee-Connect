@@ -2,7 +2,11 @@
 An advance rails user interaction system. Think like its is mini facebook with live chat support. Blogging etc.
 
 # Screenshots
-
+[[screenshots/chat_room.png|alt=octocat]]
+[[screenshots/live_chat.png|alt=octocat]]
+[[screenshots/notifications.png|alt=octocat]]
+[[screenshots/registration.png|alt=octocat]]
+[[screenshots/updatng_profile.png|alt=octocat]]
 
 ## Features
 * Login/Logout
@@ -28,12 +32,20 @@ An advance rails user interaction system. Think like its is mini facebook with l
 
 ## Installation
 
+
 ### Devlopment
 For development we use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
+
+* For windows user you can install imagemagic and add to path and also remember to install redis server on windows. For ubuntu you can follow the guide.
 
 * Clone this repo
 ```shell
 git clone https://github.com/bloggervista/Chat-Ounce.git
+```
+* Update repository
+```shell
+sudo apt update
+sudo apt install imagemagic
 ```
 * Install Redis Server
 ```shell
@@ -43,9 +55,23 @@ sudo apt install redis-server
 ```shell
 sudo service redis-server start
 ```
+* Install Imagemagick
+```shell
+sudo apt install imagemagick
+```
 * Start rails built in `Puma` server
 ```shell
 rails s
+```
+* Seed this database
+```shell
+rails db:seed
+```
+* Note this default username and password
+```
+# You can change default admin username and password from frontend interface or db/seeds.rb file
+username: chatounce98@gmail.com
+password: chatounce@
 ```
 * Go to your lovely browser and start using this project
 
