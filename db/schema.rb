@@ -50,6 +50,43 @@ ActiveRecord::Schema.define(version: 20170116043801) do
     t.index ["following_id"], name: "index_follows_on_following_id"
   end
 
+  create_table "group_memberships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.integer  "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_group_memberships_on_group_id"
+    t.index ["role_id"], name: "index_group_memberships_on_role_id"
+    t.index ["user_id", "group_id"], name: "index_group_memberships_on_user_id_and_group_id", unique: true
+    t.index ["user_id"], name: "index_group_memberships_on_user_id"
+  end
+
+  create_table "group_messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_group_messages_on_group_id"
+    t.index ["user_id"], name: "index_group_messages_on_user_id"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "thumbnail_image_file_name"
+    t.string   "thumbnail_image_content_type"
+    t.integer  "thumbnail_image_file_size"
+    t.datetime "thumbnail_image_updated_at"
+    t.string   "timeline_image_file_name"
+    t.string   "timeline_image_content_type"
+    t.integer  "timeline_image_file_size"
+    t.datetime "timeline_image_updated_at"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
@@ -104,43 +141,6 @@ ActiveRecord::Schema.define(version: 20170116043801) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "groups", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.string   "thumbnail_image_file_name"
-    t.string   "thumbnail_image_content_type"
-    t.integer  "thumbnail_image_file_size"
-    t.datetime "thumbnail_image_updated_at"
-    t.string   "timeline_image_file_name"
-    t.string   "timeline_image_content_type"
-    t.integer  "timeline_image_file_size"
-    t.datetime "timeline_image_updated_at"
-  end
-
-  create_table "group_memberships", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.integer  "role_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["role_id"], name: "index_group_memberships_on_role_id"
-    t.index ["group_id"], name: "index_group_memberships_on_group_id"
-    t.index ["user_id", "group_id"], name: "index_group_memberships_on_user_id_and_group_id", unique: true
-    t.index ["user_id"], name: "index_group_memberships_on_user_id"
-  end
-
-  create_table "group_messages", force: :cascade do |t|
-    t.text     "body"
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["group_id"], name: "index_group_messages_on_group_id"
-    t.index ["user_id"], name: "index_group_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
