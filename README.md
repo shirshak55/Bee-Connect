@@ -4,15 +4,19 @@ An advance rails user interaction system. Think like its is mini facebook with l
 # Screenshots
 
 ### Registration
-![Screenshot](/screenshots/registration.png)
+![Registration](/screenshots/registration.png)
+
 ### Chat Room
-![Screenshot](/screenshots/chat_room.png)
+![Chat Room](/screenshots/chat_room.png)
+
 ### Live Chat
-![Screenshot](/screenshots/live_chat.png)
+![Live Chat](/screenshots/live_chat.png)
+
 ### Notifications
-![Screenshot](/screenshots/notifications.png)
+![Notifications](/screenshots/notifications.png)
+
 ### Update Profile Page
-![Screenshot](/screenshots/updatng_profile.png)
+![Update Profile](/screenshots/updatng_profile.png)
 
 ## Features
 * Login/Logout
