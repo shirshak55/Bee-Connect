@@ -115,7 +115,7 @@ Use c9 (cloud 9) for testing so you can feel how much effort have been devoured 
 I wrote it around 1 years ago but I think many rails dev will like this project. So I have opensources it. Feel free to contribute and I will write the name of contributors on this readme file as a appericaiton. I am very happy to merge.
 
 #### Contributors 
-I would take following kind people who have significant contribution on this project.
+Thanks to following kind people who have significant contribution on this project.
 1. Vijay Raghavan Aravamudhan
 
 ## Support
