@@ -4,6 +4,7 @@ An advance rails user interaction system. Think like its is mini facebook with l
 # Screenshots
 
 ### Registration
+> Can someone PR good image instead of this horrible any. Any good is accepted.
 ![Registration](/screenshots/registration.png)
 
 ### Chat Room
