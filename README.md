@@ -55,7 +55,6 @@ git clone https://github.com/bloggervista/Chat-Ounce.git
 * Update repository
 ```shell
 sudo apt update
-sudo apt install imagemagic
 ```
 * Install Redis Server
 ```shell
