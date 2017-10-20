@@ -1,12 +1,15 @@
 # Chat-Ounce
 An advance rails user interaction system. Think like its is mini facebook with live chat support. Blogging etc.
 
+# Screenshots
+
+
 ## Features
 * Login/Logout
 * Registration with password reset
 * Registration User Email Verifications
 * Ability to post
-* Ability To add friends
+* Ability To follow
 * Live Chat with file attachments
 * Group Support (Called University)
 * Ability to Search Username
@@ -18,6 +21,10 @@ An advance rails user interaction system. Think like its is mini facebook with l
 * Ability to upload avatars
 * Ability to comments
 * Ability to receive message notifications
+* Good flash notifications
+* Bootstrap based
+* Moderation support
+* Roles support
 
 ## Installation
 
@@ -40,6 +47,8 @@ sudo service redis-server start
 ```shell
 rails s
 ```
+* Go to your lovely browser and start using this project
+
 
 ### Tips
 Use c9 (cloud 9) for testing so you can feel how much effort have been devoured in making it.
