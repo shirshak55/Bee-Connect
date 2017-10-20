@@ -54,23 +54,23 @@ Rails.application.routes.draw do
   #----------------------------------------------------
   resources :users,only: [:show] ,concerns: :postable
   #----------------------------------------------------
-  # University
+  # Group
   #----------------------------------------------------
-  resources :universities,concerns: :postable do
+  resources :groups,concerns: :postable do
     member do
       get 'members',:as=>'members'
 
-      post 'join/:user_id', :to => "universities#join", :as => 'join'
-      post 'unjoin/:user_id', :to => "universities#unjoin", :as => 'unjoin'
+      post 'join/:user_id', :to => "groups#join", :as => 'join'
+      post 'unjoin/:user_id', :to => "groups#unjoin", :as => 'unjoin'
 
-      post 'approve/:user_id', :to => "universities#approve", :as => 'approve'
-      post 'ban/:user_id', :to => "universities#ban", :as => 'ban'
-      post 'delete/:user_id', :to => "universities#delete", :as => 'delete'
+      post 'approve/:user_id', :to => "groups#approve", :as => 'approve'
+      post 'ban/:user_id', :to => "groups#ban", :as => 'ban'
+      post 'delete/:user_id', :to => "groups#delete", :as => 'delete'
 
-      post 'make_moderator/:user_id', :to => "universities#make_moderator", :as => 'make_moderator'
-      post 'demote_moderator/:user_id', :to => "universities#demote_moderator", :as => 'demote_moderator'
+      post 'make_moderator/:user_id', :to => "groups#make_moderator", :as => 'make_moderator'
+      post 'demote_moderator/:user_id', :to => "groups#demote_moderator", :as => 'demote_moderator'
 
-      get 'chat', :to => "universities#chat", :as => 'chat'
+      get 'chat', :to => "groups#chat", :as => 'chat'
     end
   end
   #----------------------------------------------------

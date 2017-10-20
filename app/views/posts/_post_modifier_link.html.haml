@@ -1,4 +1,4 @@
-- if post.postable_type == 'University'
+- if post.postable_type == 'Group'
   - if moderation_links_and_power(post)
     = link_to "Edit Post", [:edit,post.postable,post]
     = link_to "Delete Post", [post.postable,post], method: :delete, data: { confirm: "Are you sure you want to delete others post?" }

@@ -1,4 +1,4 @@
-class University < ApplicationRecord
+class Group < ApplicationRecord
   validates :thumbnail_image, presence: true
   validates :timeline_image, presence: true
   validates :name, presence: true
@@ -12,8 +12,8 @@ class University < ApplicationRecord
 
   has_many :posts,as: :postable
 
-  has_many :university_memberships
-  has_many :members,through: :university_memberships,source: :user
+  has_many :group_memberships
+  has_many :members,through: :group_memberships,source: :user
 
-  has_many :university_message ,dependent: :destroy
+  has_many :group_message ,dependent: :destroy
 end

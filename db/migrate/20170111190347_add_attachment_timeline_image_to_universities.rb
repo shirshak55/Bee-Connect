@@ -1,11 +1,11 @@
-class AddAttachmentTimelineImageToUniversities < ActiveRecord::Migration
+class AddAttachmentTimelineImageToGroups < ActiveRecord::Migration
   def self.up
-    change_table :universities do |t|
+    change_table :groups do |t|
       t.attachment :timeline_image
     end
   end
 
   def self.down
-    remove_attachment :universities, :timeline_image
+    remove_attachment :groups, :timeline_image
   end
 end

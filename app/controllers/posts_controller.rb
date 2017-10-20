@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :load_postable
   before_action :set_post, only: [:show, :edit, :update, :destroy, :like,:unlike]
   before_action :owned_post, only: [:edit, :update, :destroy]
-  before_action :university_approval, only: [:create,:edit, :update, :destroy,:like ,:unlike]
+  before_action :group_approval, only: [:create,:edit, :update, :destroy,:like ,:unlike]
 
   def create
     @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]
@@ -76,12 +76,12 @@ class PostsController < ApplicationController
   end
 
   def load_postable
-    @klass = [User,University].detect{|c| params["#{c.name.underscore}_id"]}
+    @klass = [User,Group].detect{|c| params["#{c.name.underscore}_id"]}
     @postable = @klass.find(params["#{@klass.name.underscore}_id"]);
   end
 
   def owned_post
-    if(@klass.name == 'University')
+    if(@klass.name == 'Group')
       unless current_user == @post.user || current_user.role.name =='admin' || (current_user.is_univerisity_moderator(@post.postable.id) && !@post.user.is_univerisity_moderator(@post.postable.id))
         flash[:alert] = "That post doesn't belong to you!"
         redirect_to root_path
@@ -93,9 +93,9 @@ class PostsController < ApplicationController
       end
     end
   end
-  def university_approval
-    if(@klass.name == 'University')
-      unless current_user.is_university_approved(@postable.id)
+  def group_approval
+    if(@klass.name == 'Group')
+      unless current_user.is_group_approved(@postable.id)
         flash[:alert] = "You are not eligible to post without approvals!"
         redirect_to root_path
       end

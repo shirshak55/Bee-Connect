@@ -48,9 +48,9 @@ class User < ActiveRecord::Base
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
 
-  has_many :university_memberships, dependent: :destroy
+  has_many :group_memberships, dependent: :destroy
 
-  has_many :university_messages ,dependent: :destroy
+  has_many :group_messages ,dependent: :destroy
 
   belongs_to :role
 
@@ -73,35 +73,35 @@ class User < ActiveRecord::Base
   def online?
     !Redis.new.get("user_#{self.id}_online").nil?
   end
-  def delete_university_user(university_id)
-    university_memberships.find_by(university_id: university_id).destroy
+  def delete_group_user(group_id)
+    group_memberships.find_by(group_id: group_id).destroy
   end
-  def join_university_toggle(university_id)
-    if(university_memberships.find_by(university_id: university_id))
-      delete_university_user(university_id);
+  def join_group_toggle(group_id)
+    if(group_memberships.find_by(group_id: group_id))
+      delete_group_user(group_id);
     else
-      university_memberships.create(university_id: university_id,role_id: Role.where(name: 'group_pending_approval').first.id)
+      group_memberships.create(group_id: group_id,role_id: Role.where(name: 'group_pending_approval').first.id)
     end
   end
 
-  def university_role_name(university_id)
-    rid = university_memberships.find_by(university_id: university_id)
+  def group_role_name(group_id)
+    rid = group_memberships.find_by(group_id: group_id)
     if(rid.present?)
       return rid.role.name
     end
     'group_pending_approval'
   end
-  def is_university_admin(university_id)
+  def is_group_admin(group_id)
     role.name == 'admin' or role.name == 'moderator'
   end
-  def is_univerisity_moderator(university_id)
-    university_role_name(university_id) == 'moderator' or is_university_admin(university_id)
+  def is_univerisity_moderator(group_id)
+    group_role_name(group_id) == 'moderator' or is_group_admin(group_id)
   end
-  def is_university_approved(university_id)
-    is_univerisity_moderator(university_id) or university_role_name(university_id) == 'group_approved'
+  def is_group_approved(group_id)
+    is_univerisity_moderator(group_id) or group_role_name(group_id) == 'group_approved'
   end
-  def university_role_update(university_id,role_name)
-    university_memberships.find_by(university_id: university_id).update(role_id: Role.where(name: role_name).first.id)
+  def group_role_update(group_id,role_name)
+    group_memberships.find_by(group_id: group_id).update(role_id: Role.where(name: role_name).first.id)
   end
 
   scope :users_to_be_followed, ->(user) { where(following: user) }

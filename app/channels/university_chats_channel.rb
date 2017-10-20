@@ -1,6 +1,6 @@
-class UniversityChatsChannel < ApplicationCable::Channel
+class GroupChatsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "university_chats_#{params['university_id']}_channel"
+    stream_from "group_chats_#{params['group_id']}_channel"
   end
 
   def unsubscribed
@@ -8,8 +8,8 @@ class UniversityChatsChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    if(current_user.is_university_approved( data['university_id']) )
-      current_user.university_messages.create!(body: data['message'], university_id: data['university_id'])
+    if(current_user.is_group_approved( data['group_id']) )
+      current_user.group_messages.create!(body: data['message'], group_id: data['group_id'])
     end
   end
 end
