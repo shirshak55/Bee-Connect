@@ -1,0 +1,48 @@
+.conversation_list_item{
+  background:#fafafa;
+}
+.conversation_box{
+  border: 1px solid #eee;
+  margin-top: 40px;
+  font-size: 16px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+.conversation_box li{
+  list-style: none;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+.conversation_list_item{
+  padding: 5px 10px;
+  transition:all 1s;
+}
+.conversation_list_item:hover{
+  background: #EAF1EF;
+  color: #337ab7;
+}
+.conversation_list_item a{
+  text-decoration: none;
+}
+.conversation_list_item__message{
+  font-size:75%;
+  color:black;
+}
+#conversation-body{
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.suggestion_box_main{
+  padding: 0;
+  list-style-type: none;
+}
+.suggestion_box_heading{
+  padding:10px 20px;
+  border-bottom:1px solid #ccc;
+  font-size:14px;
+}
+.suggestion_box_main li{
+  padding:10px 20px;
+}
