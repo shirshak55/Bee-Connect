@@ -14,11 +14,19 @@ An advance rails user interaction system. Think like its is mini facebook with l
 ### Live Chat
 ![Live Chat](/screenshots/live_chat.png)
 
+### User Post
+![User Post](/screenshots/user_post.png)
+
+### Create Group
+![User Post](/screenshots/create_group.png)
+
 ### Notifications
 ![Notifications](/screenshots/notifications.png)
 
 ### Update Profile Page
 ![Update Profile](/screenshots/update_profile.png)
+
+> There are tons of feature . So I don't want to flood this with screenshots. Thanks
 
 # Contributors 
 Thanks to following kind people who have significant contribution on this project.
