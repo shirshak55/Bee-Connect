@@ -9,8 +9,9 @@
     - if user_signed_in?
       = link_to  current_user.full_name, profile_path(current_user.user_name), class: 'navigation_box'
   .collapse.navbar-collapse#bs-navbar-collapse-1
-    .col-sm-5{style: 'margin-top: 7px;margin-left:20px;'}
-      = render 'dashboard/search_form'
+    - if user_signed_in?
+      .col-sm-3{style: 'margin-top: 7px;margin-left:20px;'}
+        = render 'dashboard/search_form'
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
         %li
