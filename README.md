@@ -57,7 +57,7 @@ For development we use sqlite. Feel free to use any database like mysql or sqlit
 
 * Clone this repo
 ```shell
-git clone https://github.com/bloggervista/Chat-Ounce.git
+git clone https://github.com/bloggervista/Bee-Connect.git
 ```
 * Update repository
 ```shell
@@ -117,7 +117,7 @@ bin/bundle exec rake bundler:audit
 Use c9 (cloud 9) for testing so you can feel how much effort have been devoured in making it.
 
 ## Contribution
-I wrote it around 1 years ago but I think many rails dev will like this project. So I have opensources it. Feel free to contribute and I will write the name of contributors on this readme file as a appericaiton. I am very happy to merge.
+I wrote it around 1 years ago but I think many rails dev will like this project. So I have opensourced it. Feel free to contribute and I will write the name of contributors on this readme file as a appericaiton. I am very happy to merge PR that will improve this project.
 
 
 
