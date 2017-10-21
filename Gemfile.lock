@@ -107,6 +107,10 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -215,6 +219,8 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     path_expander (1.0.2)
+    pg (0.21.0)
+    pg (0.21.0-x86-mingw32)
     powerpack (0.1.1)
     procto (0.0.3)
     public_suffix (3.0.0)
@@ -410,6 +416,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner (~> 1.6)
   devise
+  dotenv-rails
   factory_girl_rails (~> 4.6)
   faker (~> 1.7)
   fuubar (~> 2.2.0)
@@ -420,6 +427,7 @@ DEPENDENCIES
   meta_request
   metric_fu (~> 4.12.0)
   paperclip
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails_admin
