@@ -3,7 +3,7 @@ Rails.application.configure do
 
   config.public_file_server.enabled = true
 
-  config.action_cable.allowed_request_origins = ["http://chatounce.com","https://chatounce.com"]
+  config.action_cable.allowed_request_origins = ["http://beeconnect.com","https://beeconnect.com"]
 
   config.eager_load = true
 

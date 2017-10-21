@@ -99,8 +99,9 @@ $ RAILS_ENV=production bundle exec rake assets:precompile
 * Install Nginx
 * Use capistrano if you like
 * Point Nginx to public folder of this project
-* Enjoy!
-
+* Go to `config/database.yml` and adjust the database settings
+* Go to `config/environment/production.rb` and enter your website address or ip
+* Go to `config/initializer/devise.rb` change `config.mailer_sender` and `config.secret_key` to your appropriate settings
 ### Testing
 * To run tests:
 ```shell
@@ -130,7 +131,7 @@ I wrote it around 1 years ago but I think many rails dev will like this project.
 
 
 ## Support
-I will always support this project but if you need more premium service you can hire freelancer or why not me (just asking)?
+I will always support this project . And this project will not support older version of rails. It will support latest and LTS version of rails.
 
 
 ## Security
