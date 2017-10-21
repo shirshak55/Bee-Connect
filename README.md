@@ -146,3 +146,5 @@ If you discover any security related issue, please email `bloggervista@gmail.com
 ## Donation
 Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly ping me at `bloggervista@gmail.com` .
 If you are bitcoin user you can send me donations at blockchain `1NJb7cqYqP3nbR5WDjdaVvaduXfg8KEsHG` or `ether` at `0xA583445Acf22604219037D31f2D163B877DAad08`
+
+Don't feel bad if you cannot donate you can still help me by giving stars, forks, PR's . They mean a lot to me :)
