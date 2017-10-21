@@ -116,7 +116,8 @@ I wrote it around 1 years ago but I think many rails dev will like this project.
 
 #### Contributors 
 Thanks to following kind people who have significant contribution on this project.
-1. Vijay Raghavan Aravamudhan
+1. Vijay Raghavan Aravamudhan (@vraravam)
+2. Henrique Panham Junqueira Villela (@henriquepjv)
 
 ## Support
 I will always support this project but if you need more premium service you can hire freelancer or why not me (just asking)?
