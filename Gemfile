@@ -23,7 +23,6 @@ group :development do
   gem 'meta_request'
   gem 'web-console'
   gem "awesome_print", require:"ap"
-  gem 'rack-mini-profiler', '~> 0.10.1'
 end
 
 group :development, :test do
