@@ -1,6 +1,5 @@
 # Bee Connect
-* **Important Update** changed name to Bee Connect as previous name didn't matched it.
-An advance rails user interaction system. Think like its is mini facebook with live chat support. Blogging etc.
+An advance rails user interaction system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
 # Screenshots
 
