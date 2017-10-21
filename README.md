@@ -20,6 +20,11 @@ An advance rails user interaction system. Think like its is mini facebook with l
 ### Update Profile Page
 ![Update Profile](/screenshots/update_profile.png)
 
+# Contributors 
+Thanks to following kind people who have significant contribution on this project.
+1. Vijay Raghavan Aravamudhan (@vraravam)
+2. Henrique Panham Junqueira Villela (@henriquepjv)
+
 ## Features
 * Login/Logout
 * Registration with password reset
@@ -114,10 +119,7 @@ Use c9 (cloud 9) for testing so you can feel how much effort have been devoured 
 ## Contribution
 I wrote it around 1 years ago but I think many rails dev will like this project. So I have opensources it. Feel free to contribute and I will write the name of contributors on this readme file as a appericaiton. I am very happy to merge.
 
-#### Contributors 
-Thanks to following kind people who have significant contribution on this project.
-1. Vijay Raghavan Aravamudhan (@vraravam)
-2. Henrique Panham Junqueira Villela (@henriquepjv)
+
 
 ## Support
 I will always support this project but if you need more premium service you can hire freelancer or why not me (just asking)?
