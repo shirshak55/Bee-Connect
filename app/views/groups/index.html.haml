@@ -1,6 +1,6 @@
 .group-index-wrapper
   %h2 Groups
-  -if current_user.role.name == 'admin'
+  -if current_user.role == 'admin'
     = link_to 'New Group', new_group_path,class:'btn btn-primary'
   .div{style: 'clear:both'}
   %br

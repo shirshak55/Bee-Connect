@@ -45,9 +45,7 @@ group :test do
   gem 'simplecov', '~> 0.14', require: false
 end
 
-group :production do
-  gem 'mysql2', '~> 0.4.5'
-end
+
 
 gem 'haml'
 gem 'paperclip'
