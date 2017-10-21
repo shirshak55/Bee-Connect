@@ -197,8 +197,6 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mysql2 (0.4.5)
-    mysql2 (0.4.5-x86-mingw32)
     nested_form (0.3.2)
     netrc (0.11.0)
     nio4r (1.2.1)
@@ -224,8 +222,6 @@ GEM
     rack (2.0.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
-    rack-mini-profiler (0.10.5)
-      rack (>= 1.2.0)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -423,10 +419,8 @@ DEPENDENCIES
   kaminari
   meta_request
   metric_fu (~> 4.12.0)
-  mysql2 (~> 0.4.5)
   paperclip
   puma (~> 3.0)
-  rack-mini-profiler (~> 0.10.1)
   rails (~> 5.0.1)
   rails_admin
   redis (~> 3.0)
