@@ -53,7 +53,7 @@ Thanks to following kind people who have significant contribution on this projec
 ### Development
 For development we use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
 
-* For windows user you can install imagemagic and add to path and also remember to install redis server on windows. For ubuntu you can follow the guide.
+* For windows user you can install imagemagick and add to path and also remember to install redis server on windows. For ubuntu LTS you can follow the guide.
 
 * Clone this repo
 ```shell
@@ -73,42 +73,50 @@ sudo service redis-server start
 ```
 * Install Imagemagick
 ```shell
-sudo apt install imagemagick
+$ sudo apt install imagemagick
 ```
 * Start rails built in `Puma` server
 ```shell
-rails s
+$ rails s
 ```
 * Seed this database
 ```shell
-rails db:seed
+$rails db:seed
 ```
 * Note this default username and password
 ```
 # You can change default admin username and password from frontend interface or db/seeds.rb file
-username: chatounce98@gmail.com
-password: chatounce@
+username: admin@admin.com
+password: admin@123
 ```
 * Go to your lovely browser and start using this project
 
+### Production
+* Compile your asset
+```
+$ RAILS_ENV=production bundle exec rake assets:precompile
+```
+* Install Nginx
+* Use capistrano if you like
+* Point Nginx to public folder of this project
+* Enjoy!
+
+### Testing
 * To run tests:
-```bash
-#!bash
-bin/rake
+```shell
+$ bin/rake
 ```
 
 * To look at the coverage results:
-```bash
-#!bash
-bin/bundle exec rake brakeman:run && open brakeman-report.html
-bin/bundle exec metric_fu #--no-open
-bin/bundle exec rake && open coverage/index.html
+```shell
+$ bin/bundle exec rake brakeman:run && open brakeman-report.html
+$ bin/bundle exec metric_fu #--no-open
+$ bin/bundle exec rake && open coverage/index.html
 ```
 
 * Before committing code into the repository, please ensure that the tests all run successfully, and also that the following commands do not error out (the CI process will run these and cause build failures if you forget to do so)
-```bash
-#!bash
-bin/bundle exec rake bundler:audit
+```shell
+$ bin/bundle exec rake bundler:audit
 ```
 
 

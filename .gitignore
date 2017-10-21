@@ -22,7 +22,6 @@
 /public/system
 
 .DS_Store
-Passwords.txt
 
 /coverage/
 /brakeman-report.html
