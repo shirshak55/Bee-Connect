@@ -1,0 +1,14 @@
+languages: ruby
+rvm:
+  - 2.4.1
+cache: bundler
+services:
+  - redis-server
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install redis-server
+  - sudo service redis-server start
+  - sudo apt install imagemagick
+script:
+  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rspec
