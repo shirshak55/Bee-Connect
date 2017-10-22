@@ -30,7 +30,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'bullet', '~> 5.6'
   gem 'bundler-audit', '~> 0.6', require: false
-  gem 'dotenv-rails'
 end
 
 group :test do
@@ -48,6 +47,7 @@ group :test do
 end
 
 
+gem 'dotenv-rails'
 
 gem 'haml'
 gem 'paperclip'
