@@ -9,29 +9,16 @@ default: &default
 development:
   <<: *default
   database: beeconnect_development
-  # username: <%= ENV['DB_USERNAME'] %>
-  # password: <%= ENV['DB_PASSWORD'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
-# default: &default
-#   adapter: sqlite3
-#   # For details on connection pooling, see rails configuration guide
-#   # http://guides.rubyonrails.org/configuring.html#database-pooling
-#   pool: 5
-#   timeout: 5000
-#
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
-#
-# test:
-#   <<: *default
-#   database: db/test.sqlite3
+test:
+  adapter: sqlite3
+  pool: 5
+  database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  <<: *default
   database: beeconnect_production
-  pool: 5
-  username: laxman
-  password: chatouncem*
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
