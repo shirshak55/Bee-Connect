@@ -107,6 +107,10 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -197,8 +201,6 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mysql2 (0.4.5)
-    mysql2 (0.4.5-x86-mingw32)
     nested_form (0.3.2)
     netrc (0.11.0)
     nio4r (1.2.1)
@@ -217,6 +219,8 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     path_expander (1.0.2)
+    pg (0.21.0)
+    pg (0.21.0-x86-mingw32)
     powerpack (0.1.1)
     procto (0.0.3)
     public_suffix (3.0.0)
@@ -224,8 +228,6 @@ GEM
     rack (2.0.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
-    rack-mini-profiler (0.10.5)
-      rack (>= 1.2.0)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -414,6 +416,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner (~> 1.6)
   devise
+  dotenv-rails
   factory_girl_rails (~> 4.6)
   faker (~> 1.7)
   fuubar (~> 2.2.0)
@@ -423,10 +426,9 @@ DEPENDENCIES
   kaminari
   meta_request
   metric_fu (~> 4.12.0)
-  mysql2 (~> 0.4.5)
   paperclip
+  pg
   puma (~> 3.0)
-  rack-mini-profiler (~> 0.10.1)
   rails (~> 5.0.1)
   rails_admin
   redis (~> 3.0)

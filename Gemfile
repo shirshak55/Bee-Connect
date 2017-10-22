@@ -20,6 +20,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
   gem 'sqlite3'
+  gem 'pg'
   gem 'meta_request'
   gem 'web-console'
   gem "awesome_print", require:"ap"
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'bullet', '~> 5.6'
   gem 'bundler-audit', '~> 0.6', require: false
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -45,9 +47,7 @@ group :test do
   gem 'simplecov', '~> 0.14', require: false
 end
 
-group :production do
-  gem 'mysql2', '~> 0.4.5'
-end
+
 
 gem 'haml'
 gem 'paperclip'
