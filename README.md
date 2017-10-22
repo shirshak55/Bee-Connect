@@ -2,8 +2,27 @@
 
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect)
 
-* **Important Update** changed name to Bee Connect as previous name didn't matched it.
+** Update ** Looking for contributors who can water this project. As I don't have mac and its too boring on windows to develop rails app. You can apply to become contributors in `ISSUE` tab. It would be great if you can tell skill and what you can do for this project. Anyway I will continue to support this project by fixing security vulnerabilites and bugs.
+
 An advance rails user interaction system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
+
+# Future of this project
+> If I can afford mac I have following plan . But you can submit PR and we will credit you.
+* Using webpack and use react js 
+* Fully documentation for every parts
+* Social Login Integration wiht devise
+* Fully Developed backend. Right now admin can only delete post he cannot monitor user
+* Roles and Permissions
+* Ability to Upload Videos
+* Adding emoticons support.
+* Ability to send weekly mails 
+* Support to latest version of rails. (at the time or writing Rails 5.1)
+* Ability to create various form by admin like contact form etc.
+* Fully test with chrome headless browser and 90% code coverage
+* Advertisement support
+* Payments with leading provider like paypal, stripe.
+
+> Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
 
 # Screenshots
 
