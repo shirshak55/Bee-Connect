@@ -1,0 +1,37 @@
+.group-index-wrapper{
+  background:#fafafa;
+  padding:10px;
+  margin: 40px auto 20px;
+  width: 100%;
+  max-width:700px;
+  border:1px solid #aaa;
+}
+.group-show-wrapper{
+  max-width:1100px;
+  margin:0 auto;
+}
+.group_timeline_image {
+  width:100%
+}
+.group-index-box{
+  width:200px;
+  display:inline-block;
+  margin-right:20px
+}
+.group-index-box:last{
+  margin-right:0
+}
+.group-card-thumbnail img{
+  width:200px;
+  height:200px;
+}
+.group-card{
+  position:relative;
+  font-size:150%;
+  text-align:center
+}
+.group-index-box a,.group-index-box a:hover{
+  color:black;
+  cursor:pointer;
+  text-decoration:none;
+}

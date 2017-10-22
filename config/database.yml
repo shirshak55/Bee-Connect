@@ -1,23 +1,21 @@
 default: &default
-  adapter: sqlite3
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: beeconnect_development
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 test:
-  <<: *default
+  adapter: sqlite3
+  pool: 5
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: chatounce_production
-  pool: 5
-  username: laxman
-  password: chatouncem*
+  <<: *default
+  database: beeconnect_production
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>

@@ -1,0 +1,65 @@
+.profile-header {
+  padding: 20px 0;
+  background:white;
+  border:1px solid #bcbcbc
+}
+
+.profile-image {
+  margin: 20px auto;
+  height: 152px;
+  width: 152px;
+}
+
+.user-name-and-follow {
+  display: inline;
+}
+
+.profile-user-name {
+  display: inline;
+}
+
+.edit-button {
+  border-color: #818488;
+  color: #818488;
+}
+
+.profile-bio {
+  margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+.user_listings{
+  padding:10px 20px;
+  background:white;
+}
+.user{
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0;
+}
+.user_username a{
+  font-size:20px;
+}
+
+.registration-bg,.login-bg {
+  padding-top: 2em;
+  background-image: image-url('background.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:83.7%;
+}
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: 1px solid #ccc;
+}

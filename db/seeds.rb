@@ -2,12 +2,12 @@
   Role.find_or_create_by({name: role})
 end
 
-admin_user = {email:  'chatounce98@gmail.com',
-              password_confirmation: 'chatounce@',
-              password:  'chatounce@',
-              first_name: "Chat",
-              last_name:  "Ounce",
-              user_name:  "ChatOunce",
+admin_user = {email:  'admin@admin.com',
+              password_confirmation: 'admin@123',
+              password:  'admin@123',
+              first_name: "Admin",
+              last_name:  "Istrator",
+              user_name:  "Administrator",
               bio: "Admin is the super user",
               is_female: false,
               :confirmed_at => DateTime.now

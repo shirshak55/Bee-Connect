@@ -1,0 +1,45 @@
+.post-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 100%;
+  max-width:642px;
+}
+.post__image{
+  margin:0 auto
+}
+
+.post {
+  background-color: #fff;
+  border:1px solid #bcbcbc;
+}
+.post-head{
+  padding:10px 15px;
+}
+.post-user-name{
+  font-size:12px;
+}
+.post-user-name a,.comment-user-name a{
+  font-size:16px;
+}
+.time-ago{
+  font-size:10px;
+}
+.content,.comment{
+  margin-top:20px;
+}
+.delete-comment-icon {
+  float: right;
+  color: #515151;
+}
+.post-bottom {
+  padding:10px 20px;
+  background:#eee;
+  display:none;
+}
+.view_post_bottom{
+  padding:5px 20px;
+}
+.comment_counter{
+  cursor: pointer;
+  color:blue;
+}

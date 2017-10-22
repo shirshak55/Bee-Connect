@@ -5,16 +5,17 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    = link_to "Home", root_path , class: 'navbar-brand'
+    = link_to "Bee Connect", root_path , class: 'navbar-brand'
     - if user_signed_in?
-      = link_to  current_user.full_name, profile_path(current_user.user_name), class: 'navigation_box'
+      = link_to  current_user.full_name.titleize, profile_path(current_user.user_name), class: 'navigation_box'
   .collapse.navbar-collapse#bs-navbar-collapse-1
-    .col-sm-5{style: 'margin-top: 7px;margin-left:20px;'}
-      = render 'dashboard/search_form'
+    - if user_signed_in?
+      .col-sm-3{style: 'margin-top: 7px;margin-left:20px;'}
+        = render 'dashboard/search_form'
     %ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
         %li
-          = link_to "Group", groups_path, class: 'navigation_box'
+          = link_to "Chat Groups", groups_path, class: 'navigation_box'
         %li
           = render 'notifications/notifications_dropdown'
         %li

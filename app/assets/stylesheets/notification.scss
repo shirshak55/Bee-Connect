@@ -1,0 +1,15 @@
+.notification-index-list {
+  margin-top: 5em;
+  list-style: none;
+  li {
+    margin-top: 1em;
+    background-color: white;
+    padding: 1em;
+  }
+}
+.notification-unread{
+  border-left:3px solid green;
+}
+.alert {
+  margin-bottom: 0px;
+}

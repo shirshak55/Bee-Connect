@@ -1,0 +1,65 @@
+.navbar-brand img{
+  max-width:26px;
+  margin-right:20px;
+}
+.navbar-header .navigation_box{
+  float: left;
+  margin-top: 12px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px){
+  .notification-dropdown button{
+    display:block;
+    margin:0 auto
+  }
+  .nav>li>a{
+    text-align:center;
+  }
+}
+@media screen and (min-width: 500px){
+  .navigation_box{
+    font-size:16px
+  }
+  .notification-dropdown >  button{
+    border:none;
+    margin-top: 10px;
+  }
+
+  .navigation_box,.navigation_box:hover{
+    color:#525252;
+    text-decoration:none
+  }
+  .navbar {
+    border: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .navbar-brand{
+    padding: 12px 16px;
+  }
+
+  .navbar .navbar-brand {
+    letter-spacing: 5px;
+  }
+  .navbar-nav li a:hover {
+    color: black !important;
+  }
+  .notification-dropdown button{
+    border-radius: 15px;
+  }
+  .notifications-count,.message-notifications-count{
+    color:red
+  }
+  .navbar-nav>li>a{
+    background: white;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  .navbar-nav>li:hover{
+    color: #333;
+    background-color: #fafafa !important;
+  }
+}
