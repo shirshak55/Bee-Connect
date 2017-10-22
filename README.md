@@ -57,9 +57,9 @@ Thanks to following kind people who have significant contribution on this projec
 
 
 ### Development
-For development we use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
+For development we recommend to use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
 
-* For windows user you can install imagemagick and add to path and also remember to install redis server on windows. For ubuntu LTS you can follow the guide.
+* For windows user you can install imagemagick and add to path and also remember to install redis server on windows. And for database rename .env.example to .env and adjust that file. For ubuntu LTS you can follow the guide.
 
 * Clone this repo
 ```shell
@@ -81,13 +81,20 @@ sudo service redis-server start
 ```shell
 $ sudo apt install imagemagick
 ```
+* Setup Database
+```shell
+# Install pgsql or any database system you like
+$ cp .env.example .env
+# After copying please change that file to match database details
+```
+* Migrate and Seed this database
+```shell
+$ rails db:migrate
+$ rails db:seed
+```
 * Start rails built in `Puma` server
 ```shell
 $ rails s
-```
-* Seed this database
-```shell
-$rails db:seed
 ```
 * Note this default username and password
 ```
