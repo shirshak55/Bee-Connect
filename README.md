@@ -22,6 +22,8 @@ An advance rails user interaction system. Think like its is mini facebook with l
 * Fully test with chrome headless browser and 90% code coverage
 * Advertisement support
 * Payments with leading provider like paypal, stripe.
+* API For mobile devices
+* JWT based authentication for mobile device
 
 > Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
 
