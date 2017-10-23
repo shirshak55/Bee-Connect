@@ -2,6 +2,12 @@
 
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect)
 
+[![StyleCI][ico-styleci]][link-styleci]
+
+[ico-styleci]: https://styleci.io/repos/1000001/shield
+
+[link-styleci]: https://styleci.io/repos/1000001
+
 *** Update *** Looking for contributors who can water this project. As I don't have mac and its too boring on windows to develop rails app. You can apply to become contributors in `ISSUE` tab. It would be great if you can tell skill and what you can do for this project. Anyway I will continue to support this project by fixing security vulnerabilites and bugs.
 
 An advance rails user interaction system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..

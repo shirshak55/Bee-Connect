@@ -1,0 +1,16 @@
+preset: recommended
+
+linting: true
+
+enabled:
+  - logical_not_operators_with_successor_space
+  - combine_consecutive_unsets
+  - long_array_syntax
+  - newline_after_open_tag
+  - no_php4_constructor
+  - no_useless_else
+  - ordered_class_elements
+disabled:
+  - align_double_arrow
+  - new_with_braces
+  - ordered_use
