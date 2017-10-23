@@ -51,8 +51,10 @@ An advance rails user interaction system. Think like its is mini facebook with l
 
 # Contributors 
 Thanks to following kind people who have significant contribution on this project.
-1. Vijay Raghavan Aravamudhan (@vraravam)
-2. Henrique Panham Junqueira Villela (@henriquepjv)
+
+1. Henrique Panham Junqueira Villela (@henriquepjv)
+2. Vijay Raghavan Aravamudhan (@vraravam)
+3. Nenad Miloradovic (@nenadmil)
 
 ## Features
 * Login/Logout
