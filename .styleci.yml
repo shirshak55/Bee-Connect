@@ -5,7 +5,6 @@ linting: true
 enabled:
   - logical_not_operators_with_successor_space
   - combine_consecutive_unsets
-  - long_array_syntax
   - newline_after_open_tag
   - no_php4_constructor
   - no_useless_else
