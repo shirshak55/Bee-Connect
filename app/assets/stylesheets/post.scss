@@ -43,3 +43,8 @@
   cursor: pointer;
   color:blue;
 }
+p.emoji-picker-container {
+    position: relative;
+    display: block;
+    min-width: 300px;
+}

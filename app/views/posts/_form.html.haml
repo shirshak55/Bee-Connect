@@ -8,10 +8,11 @@
         %li= message
 
 = simple_form_for [postable,post], html: { multipart: true } do |f|
-  = f.input :content, label: false, placeholder: 'Write your feelings...', input_html: { rows: 2 }
+  %p.emoji-picker-container
+    = f.text_field :content, label: false, placeholder: 'Write your feelings...', input_html: { rows: 3 }, data: { emojiable: true }
   %label{class: 'btn btn-default btn-file'}
     %span{class: 'glyphicon glyphicon-share'}
-    Upload 
+    Upload
     = f.input :attachment, label: false,wrapper: false,input_html: { onChange: 'loadFile(event)' }
   = f.button :submit, class: 'btn-success'
 = form_image_select(post)

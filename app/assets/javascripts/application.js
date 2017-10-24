@@ -16,4 +16,5 @@
 //= require jquery.remotipart
 //= require chat
 //= require cable
+//= require rails_emoji_picker
 //= require_tree .
