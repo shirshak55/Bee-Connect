@@ -1,4 +1,4 @@
-class AddAttachmentAttachmentToPersonalMessages < ActiveRecord::Migration
+class AddAttachmentAttachmentToPersonalMessages < ActiveRecord::Migration[5.0]
   def self.up
     change_table :personal_messages do |t|
       t.attachment :attachment

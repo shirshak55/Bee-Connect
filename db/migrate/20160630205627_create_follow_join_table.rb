@@ -1,4 +1,4 @@
-class CreateFollowJoinTable < ActiveRecord::Migration  
+class CreateFollowJoinTable < ActiveRecord::Migration[5.0]
   def change
     create_table 'follows' do |t|
       t.integer 'following_id', :null => false

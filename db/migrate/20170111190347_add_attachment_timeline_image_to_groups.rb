@@ -1,4 +1,4 @@
-class AddAttachmentTimelineImageToGroups < ActiveRecord::Migration
+class AddAttachmentTimelineImageToGroups < ActiveRecord::Migration[5.0]
   def self.up
     change_table :groups do |t|
       t.attachment :timeline_image
