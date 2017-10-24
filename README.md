@@ -61,6 +61,7 @@ Thanks to following kind people who have significant contribution on this projec
 4. Sebastian Jimenez (@sebasjimenez10)
 
 ## Features
+* Latest version of Rail(v5.1.4)
 * Login/Logout
 * Registration with password reset
 * Registration User Email Verifications
@@ -134,7 +135,7 @@ password: admin@123
 * Go to your lovely browser and start using this project
 
 ### Production
-* Compile your asset
+* Compile your asset so that they will be minified and production ready.
 ```
 $ RAILS_ENV=production bundle exec rake assets:precompile
 ```
@@ -144,6 +145,7 @@ $ RAILS_ENV=production bundle exec rake assets:precompile
 * Go to `config/database.yml` and adjust the database settings
 * Go to `config/environment/production.rb` and enter your website address or ip
 * Go to `config/initializer/devise.rb` change `config.mailer_sender` and `config.secret_key` to your appropriate settings
+
 ### Testing
 * To run tests:
 ```shell
@@ -162,19 +164,14 @@ $ bin/bundle exec rake && open coverage/index.html
 $ bin/bundle exec rake bundler:audit
 ```
 
-
-
 ### Tips
-Use c9 (cloud 9) for testing so you can feel how much effort have been devoured in making it.
+If you are windows user we recommend you to use Cloud9 online IDE or use rails installer.
 
 ## Contribution
-I wrote it around 1 years ago but I think many rails dev will like this project. So I have opensourced it. Feel free to contribute and I will write the name of contributors on this readme file as a appericaiton. I am very happy to merge PR that will improve this project.
-
-
+Feel free to contribute and we will write the name of contributors on this readme file as a appericaiton. We are very happy to merge your PR and give you full credit
 
 ## Support
 I will always support this project . And this project will not support older version of rails. It will support latest and LTS version of rails.
-
 
 ## Security
 If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
