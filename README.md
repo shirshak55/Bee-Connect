@@ -9,14 +9,14 @@ An advance rails user interaction system. Think like its is mini facebook with l
 
 # Future of this project
 > If I can afford mac I have following plan . But you can submit PR and we will credit you.
-* Using webpack and use react js 
+* Using webpack and use react js
 * Fully documentation for every parts
 * Social Login Integration wiht devise
 * Fully Developed backend. Right now admin can only delete post he cannot monitor user
 * Roles and Permissions
 * Ability to Upload Videos
 * Adding emoticons support.
-* Ability to send weekly mails 
+* Ability to send weekly mails
 * Support to latest version of rails. (at the time or writing Rails 5.1)
 * Ability to create various form by admin like contact form etc.
 * Fully test with chrome headless browser and 90% code coverage
@@ -52,12 +52,13 @@ An advance rails user interaction system. Think like its is mini facebook with l
 
 > There are tons of feature . So I don't want to flood this with screenshots. Thanks
 
-# Contributors 
+# Contributors
 Thanks to following kind people who have significant contribution on this project.
 
 1. Henrique Panham Junqueira Villela (@henriquepjv)
 2. Vijay Raghavan Aravamudhan (@vraravam)
 3. Nenad Miloradovic (@nenadmil)
+4. Sebastian Jimenez (@sebasjimenez10)
 
 ## Features
 * Login/Logout
