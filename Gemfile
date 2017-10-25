@@ -46,6 +46,7 @@ group :test do
   gem 'simplecov', '~> 0.14', require: false
 end
 
+gem 'rails_emoji_picker'
 
 gem 'dotenv-rails'
 

@@ -112,6 +112,8 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
+    emoji (1.0.7)
+      json
     equalizer (0.0.11)
     erubi (1.7.0)
     erubis (2.7.0)
@@ -288,6 +290,8 @@ GEM
       json
       require_all
       ruby-progressbar
+    rails_emoji_picker (0.1.5)
+      emoji
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -455,6 +459,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.1.4)
   rails_admin
+  rails_emoji_picker
   redis (~> 3.0)
   remotipart (~> 1.2)
   rspec-rails (~> 3.6)

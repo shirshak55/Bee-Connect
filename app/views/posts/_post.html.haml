@@ -12,7 +12,7 @@
       .clear
       .attachment
         .attachment-content
-          = post.content
+          = content_with_emoji(post.content)
       .clear
     .image.center-block
       - if post.attachment.exists?
