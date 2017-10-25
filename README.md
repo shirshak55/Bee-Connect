@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![StyleCI](https://styleci.io/repos/107520275/shield?style=plastic)](https://styleci.io/repos/107520275/shield?style=plastic) [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/shirshak "Donate to this project using Patreon")
 
 
-*** Update *** Looking for contributors who can water this project. As I don't have mac and its too boring on windows to develop rails app. You can apply to become contributors in `ISSUE` tab. It would be great if you can tell skill and what you can do for this project. Anyway I will continue to support this project by fixing security vulnerabilites and bugs.
+*** Update *** Laravel 5.5 Version of this project is comming soon with new features
 
-An advance rails user interaction system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
+An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
 # Future of this project
 > If I can afford mac I have following plan . But you can submit PR and we will credit you.
