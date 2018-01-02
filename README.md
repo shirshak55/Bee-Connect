@@ -2,13 +2,9 @@
 
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![StyleCI](https://styleci.io/repos/107520275/shield?style=plastic)](https://styleci.io/repos/107520275/shield?style=plastic) [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/shirshak "Donate to this project using Patreon")
 
-
-*** Update *** Laravel 5.5 Version And React Redux Express version of similar version of Bee-Connect coming soon... but we need financial help for servers etc..
-
 An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
 # Future of this project
-> If I can afford mac I have following plan . But you can submit PR and we will credit you.
 * Using webpack and use react js
 * Fully documentation for every parts
 * Social Login Integration wiht devise
