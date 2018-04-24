@@ -101,6 +101,10 @@ $ rails s
 username: admin@admin.com
 password: admin@123
 ```
+* Start the sidekiq queue server. If you don't start you will not see live chat like that.
+```bash
+$ bundle exec sidekiq
+```
 * Go to your lovely browser and start using this project
 
 ### Production
