@@ -29,14 +29,6 @@ An advance rails social netowrking system. Think like its is mini facebook with 
 
 > There are tons of feature . So I don't want to flood this with screenshots. Thanks
 
-# Contributors
-Thanks to following kind people who have significant contribution on this project.
-
-1. Henrique Panham Junqueira Villela (@henriquepjv)
-2. Vijay Raghavan Aravamudhan (@vraravam)
-3. Nenad Miloradovic (@nenadmil)
-4. Sebastian Jimenez (@sebasjimenez10)
-
 ## Features
 * Latest version of Rail(v5.1.4)
 * Login/Logout
