@@ -4,25 +4,6 @@
 
 An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
-# Future of this project
-* Using webpack and use react js
-* Fully documentation for every parts
-* Social Login Integration wiht devise
-* Fully Developed backend. Right now admin can only delete post he cannot monitor user
-* Roles and Permissions
-* Ability to Upload Videos
-* Adding emoticons support.
-* Ability to send weekly mails
-* Support to latest version of rails. (at the time or writing Rails 5.1)
-* Ability to create various form by admin like contact form etc.
-* Fully test with chrome headless browser and 90% code coverage
-* Advertisement support
-* Payments with leading provider like paypal, stripe.
-* API For mobile devices
-* JWT based authentication for mobile device
-
-> Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
-
 # Screenshots
 
 ### Registration
@@ -164,10 +145,31 @@ $ bin/bundle exec rake bundler:audit
 If you are windows user we recommend you to use Cloud9 online IDE or use rails installer.
 
 ## Contribution
-Feel free to contribute and we will write the name of contributors on this readme file as a appericaiton. We are very happy to merge your PR and give you full credit
+Feel free to contribute and we are very happy to merge your PR.
+
+
+# Future of this project
+* Using webpack and use react js
+* Fully documentation for every parts
+* Social Login Integration wiht devise
+* Fully Developed backend. Right now admin can only delete post he cannot monitor user
+* Roles and Permissions
+* Ability to Upload Videos
+* Adding emoticons support.
+* Ability to send weekly mails
+* Support to latest version of rails. (at the time or writing Rails 5.1)
+* Ability to create various form by admin like contact form etc.
+* Fully test with chrome headless browser and 90% code coverage
+* Advertisement support
+* Payments with leading provider like paypal, stripe.
+* API For mobile devices
+* JWT based authentication for mobile device
+
+> Or you can PR us about these feature
+> Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
 
 ## Support
-I will always support this project . And this project will not support older version of rails. It will support latest and LTS version of rails.
+Latest version of rails will be supported.
 
 ## Security
 If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
