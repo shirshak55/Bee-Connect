@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![StyleCI](https://styleci.io/repos/107520275/shield?style=plastic)](https://styleci.io/repos/107520275/shield?style=plastic) [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/shirshak "Donate to this project using Patreon")
 
+Project supervised  by *Ankit Acharya*
+
 An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
 # Screenshots
