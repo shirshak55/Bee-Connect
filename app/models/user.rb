@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  before_create :set_default_role
+  before_validation :set_default_role
   acts_as_voter
 
   # Just For Devise
