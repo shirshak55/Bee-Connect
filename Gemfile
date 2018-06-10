@@ -40,7 +40,7 @@ group :test do
 
   gem 'fuubar', '~> 2.2.0'
   gem 'database_cleaner', '~> 1.6'
-  gem 'factory_girl_rails', '~> 4.6'
+  gem 'factory_bot_rails'
   gem 'faker', '~> 1.7'
   gem 'shoulda', '~> 3.5.0'
   gem 'simplecov', '~> 0.14', require: false
