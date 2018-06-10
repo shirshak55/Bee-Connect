@@ -1,4 +1,4 @@
-# Bee Connect
+# Bee Connect (Active)
 
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![StyleCI](https://styleci.io/repos/107520275/shield?style=plastic)](https://styleci.io/repos/107520275/shield?style=plastic) [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/shirshak "Donate to this project using Patreon")
 
@@ -147,9 +147,10 @@ Feel free to contribute and we are very happy to merge your PR.
 
 
 # Future of this project
+* Use Tabler as admin panel
 * Using webpack and use react js
 * Fully documentation for every parts
-* Social Login Integration wiht devise
+* Social Login with facebook, github, twitter etc.
 * Fully Developed backend. Right now admin can only delete post he cannot monitor user
 * Roles and Permissions
 * Ability to Upload Videos
@@ -173,14 +174,14 @@ Latest version of rails will be supported.
 If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
 
 ## Donation
-Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly ping me at `bloggervista@gmail.com` .
+Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly message me at `bloggervista@gmail.com` .
 If you are bitcoin user you can send me donations at blockchain `1NJb7cqYqP3nbR5WDjdaVvaduXfg8KEsHG` or `ether` at `0xA583445Acf22604219037D31f2D163B877DAad08`
 
 ## How can I thank you?
-Why not star the github repo or make small donations?
+Why not star the github repo?
 
-Don't forget me to ask any questions via [facebook](https://facebook.com/iamshirshak)!
+Don't forget me to ask any questions via [facebook](https://facebook.com/iamshirshak)! or issue tab?
 
-Thanks!
+Thank you DHH and everybody at opensource.
 
 Shirshak Bajgain
