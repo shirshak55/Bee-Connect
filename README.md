@@ -5,6 +5,7 @@
 
 An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
+
 # Screenshots
 
 ### Registration
@@ -59,7 +60,7 @@ An advance rails social netowrking system. Think like its is mini facebook with 
 ### Development
 For development we recommend to use sqlite. Feel free to use any database like mysql or sqlite or pgsql.
 
-* For windows user you can install imagemagick and add to path and also remember to install redis server on windows. And for database rename .env.example to .env and adjust that file. For ubuntu LTS you can follow the guide.
+* For windows user you can install imagemagick and add to path and also remember to install redis server on windows. And for database rename `.env.example` to `.env` and adjust that file. For Ubuntu LTS (18.04) you can follow the guide.
 
 * Clone this repo
 ```shell
@@ -122,22 +123,10 @@ $ RAILS_ENV=production bundle exec rake assets:precompile
 
 ### Testing
 * To run tests:
-```shell
-$ bin/rake
-```
 
-* To look at the coverage results:
-```shell
-$ bin/bundle exec rake brakeman:run && open brakeman-report.html
-$ bin/bundle exec metric_fu #--no-open
-$ bin/bundle exec rake && open coverage/index.html
 ```
-
-* Before committing code into the repository, please ensure that the tests all run successfully, and also that the following commands do not error out (the CI process will run these and cause build failures if you forget to do so)
-```shell
-$ bin/bundle exec rake bundler:audit
+Will be added soon
 ```
-
 ### Tips
 If you are windows user we recommend you to use Cloud9 online IDE or use rails installer.
 
@@ -171,6 +160,12 @@ Latest version of rails will be supported.
 
 ## Security
 If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
+
+## Contributors
+Lead Contributor: Gary Traffanstedt 
+
+And thanks to other contributors also :) 
+
 
 ## Donation
 Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly message me at `bloggervista@gmail.com` .
