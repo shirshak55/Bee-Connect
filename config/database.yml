@@ -10,9 +10,10 @@ development:
   password: <%= ENV['DB_PASSWORD'] %>
 
 test:
-  adapter: sqlite3
-  pool: 5
-  database: db/test.sqlite3
+  <<: *default
+  database: beeconnect_test
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 production:
   <<: *default
