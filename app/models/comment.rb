@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :post
+  belongs_to :user, required: true
+  belongs_to :post, required: true
 
 end
