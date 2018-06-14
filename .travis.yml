@@ -1,14 +1,34 @@
 languages: ruby
+
+dist: trusty
+sudo: required
+
 rvm:
   - 2.5.1
+
+addons:
+  chrome: stable
+
 bundler_args: --without development production
+
 cache: bundler
+
 services:
   - postgresql
   - redis-server
+
+before_install:
+  - wget http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - rm chromedriver_linux64.zip
+  - sudo mv -f chromedriver /usr/local/bin/
+  - sudo chmod +x /usr/local/bin/chromedriver
+  - google-chrome-stable --headless --no-sandbox
+
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+
 script:
   - RAILS_ENV=test bundle exec rails db:schema:load --trace
   - bundle exec rspec
