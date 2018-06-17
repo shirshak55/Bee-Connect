@@ -5,7 +5,7 @@
     .row
       .col-sm-8
         = render 'common_links'
-        - if current_user.is_group_approved(@group.id)
+        - if current_user.group_approved?(@group.id)
           %main#posts
             .post-wrapper
               .post
@@ -19,7 +19,7 @@
       .col-sm-4
         .post-wrapper
           = render 'join_and_unjoin_button',group:@group,user:current_user
-          - if current_user.is_group_approved(@group.id)
+          - if current_user.group_approved?(@group.id)
             .post-wrapper
               .post
                 .post-head

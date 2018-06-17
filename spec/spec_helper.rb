@@ -1,5 +1,19 @@
 # frozen_string_literal: true
 
+unless ENV['nocoverage']
+  require 'simplecov'
+  require 'simplecov-console'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+    [
+      SimpleCov::Formatter::HTMLFormatter,
+      SimpleCov::Formatter::Console
+    ]
+  )
+  SimpleCov.start 'rails' do
+    add_filter '/controllers/'
+  end
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.syntax = [:expect, :should]
@@ -78,11 +92,13 @@ RSpec.configure do |config|
 end
 
 # Share mail deliveries between threads.
-class Mail::TestMailer
-  mattr_accessor :shared_deliveries
+module Mail
+  class TestMailer
+    mattr_accessor :shared_deliveries
 
-  def self.deliveries
-    @@shared_deliveries || []
+    def self.deliveries
+      @@shared_deliveries || []
+    end
   end
 end
 Mail::TestMailer.shared_deliveries = Mail::TestMailer.deliveries

@@ -1,15 +1,15 @@
 %div{class: "padding20 bglgray sb1 dib w250 text-center" ,id: "user_box_#{member.user.id}"}
   = profile_avatar_select(member.user)
   %h6= link_to member.user.full_name,profile_path(member.user.user_name)
-  - if(current_user.is_univerisity_moderator(@group.id))
-    - if(type == 'pending')
-      = link_to 'Approve',approve_group_path(group.id,member.user.id),class: 'btn btn-success',id:"approve_user_#{member.user.id}",remote: true,method: :post
-    - if( (type == 'pending' or type =='moderators' or type =='members' or type =='banned') && moderation_power(member.user,group))
-      = link_to 'Delete',delete_group_path(group.id,member.user.id),class: 'btn btn-danger',id:"delete_user_#{member.user.id}",remote: true,method: :post
-    - if( (type == 'pending' or type =='moderators' or type =='members') && moderation_power(member.user,group) )
-      = link_to 'Ban',ban_group_path(group.id,member.user.id),class: 'btn btn-warning',id:"ban_user_#{member.user.id}",remote: true,method: :post
-    - if(current_user.is_group_admin(@group.id))
-      -if(type == 'moderators')
-        = link_to 'Demote',demote_moderator_group_path(group.id,member.user.id),class: 'btn btn-info',id:"demote_user_#{member.user.id}",remote: true,method: :post
-      -if(type == 'members')
-        = link_to 'Promote',make_moderator_group_path(group.id,member.user.id),class: 'btn btn-info',id:"promote_user_#{member.user.id}",remote: true,method: :post
+  - if current_user.university_moderator?(@group.id)
+    - if type == 'pending'
+      = link_to 'Approve',approve_group_path(group.id,member.user.id), class: 'btn btn-success', id:"approve_user_#{member.user.id}", remote: true, method: :post
+    - if (type == 'pending' or type =='moderators' or type =='members' or type =='banned') && moderation_power(member.user,group)
+      = link_to 'Delete', delete_group_path(group.id,member.user.id), class: 'btn btn-danger', id:"delete_user_#{member.user.id}", remote: true, method: :post
+    - if (type == 'pending' or type =='moderators' or type =='members') && moderation_power(member.user,group)
+      = link_to 'Ban', ban_group_path(group.id,member.user.id), class: 'btn btn-warning', id:"ban_user_#{member.user.id}", remote: true, method: :post
+    - if current_user.group_admin?(@group.id)
+      -if type == 'moderators'
+        = link_to 'Demote', demote_moderator_group_path(group.id,member.user.id),class: 'btn btn-info',id:"demote_user_#{member.user.id}", remote: true, method: :post
+      -if type == 'members'
+        = link_to 'Promote', make_moderator_group_path(group.id,member.user.id),class: 'btn btn-info',id:"promote_user_#{member.user.id}", remote: true, method: :post

@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature 'User signs Up' do
-  before(:all) do
-    # Ensure no emails are left from previous tests
-    clear_emails
-  end
+RSpec.feature 'User signs Up', type: :system do
+  # before(:all) do
+  #   # Ensure no emails are left from previous tests
+  #   clear_emails
+  # end
 
   # Build stubbed user
   let(:user) { FactoryBot.build_stubbed(:user) }

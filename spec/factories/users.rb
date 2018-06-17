@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :user do
     user_name             { Faker::Internet.user_name(2..20) }
@@ -9,6 +11,6 @@ FactoryBot.define do
     password_confirmation { 'testing' }
     is_female             false
     role                  { Role.where(name: 'registered').first_or_create! }
-    confirmed_at          { Time.now }
+    confirmed_at          { Time.current }
   end
 end

@@ -1,7 +1,7 @@
 .bgwhite.sb1.mt20.mwidth960.mauto.padding20
   = render 'common_links'
   %hr
-  - if current_user.is_group_approved(@group.id)
+  - if current_user.group_approved?(@group.id)
     %h4 Moderators
     -@members.each do |member|
       -if(member.role_id == @moderator_role_id)
@@ -12,8 +12,8 @@
       -if(member.role_id == @approved_role_id)
         = render 'members_common_links',group: @group , member: member,type: 'members'
     %hr
-    - if current_user.is_group_approved(@group.id)
-      - if(current_user.is_univerisity_moderator(@group.id))
+    - if current_user.group_approved?(@group.id)
+      - if(current_user.university_moderator?(@group.id))
         %h4 Pending To Be Approved
         -@members.each do |member|
           -if(member.role_id == @pending_role_id)

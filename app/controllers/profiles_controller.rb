@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
@@ -22,7 +24,6 @@ class ProfilesController < ApplicationController
   end
 
   def show_all_users
-
   end
 
   private
@@ -32,15 +33,14 @@ class ProfilesController < ApplicationController
   end
 
   def owned_profile
-    unless current_user == @user
-      flash[:alert] = "That profile doesn't belong to you!"
-      redirect_to root_path
-    end
+    return if current_user == @user
+
+    flash[:alert] = "That profile doesn't belong to you!"
+    redirect_to root_path
   end
 
   def set_user
     @user = User.find_by(user_name: params[:user_name])
-    @users= User.all
+    @users = User.all
   end
-
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post
@@ -16,7 +18,7 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     if @comment.save
       unless @post.user.id == current_user.id
-        Notification.find_or_initialize_by(recipient: @post.user,actor: current_user,action: 'commented',notifiable: @post).update_attributes!(read_at: nil)
+        Notification.find_or_initialize_by(recipient: @post.user, actor: current_user, action: 'commented', notifiable: @post).update!(read_at: nil)
       end
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -31,16 +33,16 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @post.comments.find(params[:id])
 
-    if @comment.user_id == current_user.id
-      @comment.destroy
-      respond_to do |format|
-        format.html { redirect_to root_path }
-        format.js
-      end
+    return nil unless @comment.user_id == current_user.id
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js
     end
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:content)
   end
@@ -48,5 +50,4 @@ class CommentsController < ApplicationController
   def set_post
     @post = Post.find(params[:post_id])
   end
-
 end

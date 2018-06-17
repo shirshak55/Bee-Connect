@@ -1,0 +1,97 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - db/*
+    - db/migrate/*
+    - config/*
+    - config/environments/*
+    - config/initializers/*
+    - lib/tasks/*
+    - Rakefile
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+
+Documentation:
+  Enabled: false
+
+DotPosition:
+  EnforcedStyle: leading
+
+Semicolon:
+  Enabled: false
+
+# LAYOUT ##########
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+# METRICS ##########
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 8
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 18
+
+# RAILS ##########
+Rails:
+  Enabled: true
+
+Rails/OutputSafety:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# STYLE ##########
+Style/BlockComments:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false

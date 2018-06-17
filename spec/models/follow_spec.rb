@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Follow, type: :model do
   context 'Model Associations' do
     it { is_expected.to belong_to(:follower).class_name('User').with_foreign_key('follower_id').required(true) }
