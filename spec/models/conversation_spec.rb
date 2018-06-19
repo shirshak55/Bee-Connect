@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe Conversation, type: :model do
-  # Include three user fixtures
-  %w[user1 user2 user3].each { |context| include_context context }
+  let!(:user1) { FactoryBot.create(:user) }
+  let!(:user2) { FactoryBot.create(:user) }
+  let!(:user3) { FactoryBot.create(:user) }
 
   # user1 -> user2
   let!(:conversation1) { FactoryBot.create(:conversation, author_id: user1.id, receiver_id: user2.id) }

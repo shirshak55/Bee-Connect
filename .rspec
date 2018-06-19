@@ -1,7 +1,6 @@
 --color
-#--order random
-#--profile
-#--backtrace
-#--format Fuubar
---format documentation
+--order random
+--profile
+--backtrace
+--format Fuubar
 --require rails_helper

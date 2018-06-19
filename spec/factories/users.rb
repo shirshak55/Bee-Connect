@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :user do
-    user_name             { Faker::Internet.user_name(2..20) }
+    sequence(:user_name) { |n| Faker::Internet.user_name(2..20) + n.to_s }
     email                 { Faker::Internet.email(user_name) }
     bio                   { Faker::Hipster.paragraph(3) }
     first_name            { Faker::Name.first_name }

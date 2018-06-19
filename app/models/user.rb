@@ -90,12 +90,12 @@ class User < ApplicationRecord
     (role.name == 'admin') || (role.name == 'moderator')
   end
 
-  def university_moderator?(group_id)
+  def group_moderator?(group_id)
     (group_role_name(group_id) == 'moderator') || group_admin?(group_id)
   end
 
   def group_approved?(group_id)
-    university_moderator?(group_id) || (group_role_name(group_id) == 'group_approved')
+    group_moderator?(group_id) || (group_role_name(group_id) == 'group_approved')
   end
 
   def group_role_update(group_id, role_name)

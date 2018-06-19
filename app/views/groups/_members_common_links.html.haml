@@ -1,7 +1,7 @@
 %div{class: "padding20 bglgray sb1 dib w250 text-center" ,id: "user_box_#{member.user.id}"}
   = profile_avatar_select(member.user)
   %h6= link_to member.user.full_name,profile_path(member.user.user_name)
-  - if current_user.university_moderator?(@group.id)
+  - if current_user.group_moderator?(@group.id)
     - if type == 'pending'
       = link_to 'Approve',approve_group_path(group.id,member.user.id), class: 'btn btn-success', id:"approve_user_#{member.user.id}", remote: true, method: :post
     - if (type == 'pending' or type =='moderators' or type =='members' or type =='banned') && moderation_power(member.user,group)

@@ -2,16 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.feature 'User signs Up', type: :system do
-  # before(:all) do
-  #   # Ensure no emails are left from previous tests
-  #   clear_emails
-  # end
-
+RSpec.describe 'User signs Up', type: :system, js: true do
   # Build stubbed user
-  let(:user) { FactoryBot.build_stubbed(:user) }
+  let!(:new_user) { FactoryBot.build_stubbed(:user) }
 
-  scenario 'open confirmation email' do
+  scenario 'open confirmation email', :aggregate_failures do
     # Open home page
     visit root_path
 
@@ -19,26 +14,36 @@ RSpec.feature 'User signs Up', type: :system do
     click_link 'Sign up'
 
     # Complete sign up form
-    fill_in 'user[email]', with: user.email
-    fill_in 'user[user_name]', with: user.user_name
-    fill_in 'user[first_name]', with: user.first_name
-    fill_in 'user[last_name]', with: user.last_name
-    fill_in 'user[password]', with: user.password
-    fill_in 'user[password_confirmation]', with: user.password
+    fill_in 'user[email]', with: new_user.email
+    fill_in 'user[user_name]', with: new_user.user_name
+    fill_in 'user[first_name]', with: new_user.first_name
+    fill_in 'user[last_name]', with: new_user.last_name
+    fill_in 'user[password]', with: new_user.password
+    fill_in 'user[password_confirmation]', with: new_user.password
 
     # Submit sign up form
     click_button 'Sign up'
 
     # Open email address confirmation email
-    open_email(user.email)
+    open_email(new_user.email)
 
-    # Test that the welcome message is found in the email
-    expect(current_email).to have_content "Welcome #{user.email}!"
+    # Test that we received the email and it has the correct subject and message
+    expect(current_email.subject).to eq('Confirmation instructions')
+    expect(current_email).to have_content "Welcome #{new_user.email}!"
 
     # Click link to confirm email address
     current_email.click_link 'Confirm my account'
 
     # Test that the email address is confirmed and correct success message is present
     expect(page).to have_content 'Your email address has been successfully confirmed.'
+
+    # Test logging in
+    visit new_user_session_path
+    fill_in 'user_login', with: new_user.user_name
+    fill_in 'user_password', with: new_user.password
+
+    click_button 'Log in'
+
+    expect(page).to have_content('Signed in successfully.')
   end
 end

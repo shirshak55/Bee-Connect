@@ -13,7 +13,7 @@
         = render 'members_common_links',group: @group , member: member,type: 'members'
     %hr
     - if current_user.group_approved?(@group.id)
-      - if(current_user.university_moderator?(@group.id))
+      - if(current_user.group_moderator?(@group.id))
         %h4 Pending To Be Approved
         -@members.each do |member|
           -if(member.role_id == @pending_role_id)

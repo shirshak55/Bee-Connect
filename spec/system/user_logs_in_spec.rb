@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-RSpec.describe 'User logs in' do
-  include_context 'user'
+RSpec.describe 'User logs in', type: :system do
+  let!(:new_user2) { FactoryBot.create(:user) }
 
-  let!(:valid_user_name) { user.user_name }
-  let!(:valid_password) { user.password }
+  let!(:valid_user_name) { new_user2.user_name }
+  let!(:valid_password) { new_user2.password }
 
   let!(:invalid_user_name) { 'tester1' }
   let!(:invalid_password) { '11111111' }

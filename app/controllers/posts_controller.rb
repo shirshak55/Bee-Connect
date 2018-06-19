@@ -88,7 +88,7 @@ class PostsController < ApplicationController
 
   def owned_post
     if @klass.name == 'Group'
-      unless current_user == @post.user || current_user.role.name == 'admin' || (current_user.university_moderator?(@post.postable.id) && !@post.user.university_moderator?(@post.postable.id))
+      unless current_user == @post.user || current_user.role.name == 'admin' || (current_user.group_moderator?(@post.postable.id) && !@post.user.group_moderator?(@post.postable.id))
         flash[:alert] = "That post doesn't belong to you!"
         redirect_to root_path
       end

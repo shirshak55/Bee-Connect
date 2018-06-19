@@ -75,5 +75,5 @@ group :test do
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers', branch: 'master'
   gem 'simplecov', '~> 0.14', require: false
   gem 'simplecov-console', require: false
-  gem 'test-prof'
+  # gem 'test-prof'
 end

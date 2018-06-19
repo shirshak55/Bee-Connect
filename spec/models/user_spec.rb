@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe User, type: :model do
-  include_context 'user'
+  let!(:user) { FactoryBot.create(:user, first_name: 'Josh', last_name: 'Steiner') }
 
   context 'Model Associations' do
     it { is_expected.to belong_to(:role) }
@@ -31,21 +31,6 @@ RSpec.describe User, type: :model do
     # TODO: write tests for :user_name format - the following is no longer valid
     # it { is_expected.to validate_format_of(:user_name).case_insensitive }
   end
-
-  # TODO(Gary): these work locally and fail remotely - will investigate and fix
-  # context 'Scope Tests' do
-  #   describe ':users_to_be_followed' do
-  #     it 'returns users to be followed for given user', :aggregate_failures do
-  #       expect(User.users_to_be_followed(user.id)).to include(user)
-  #     end
-  #   end
-  #
-  #   describe ':search_name' do
-  #     it 'returns users that match the search term', :aggregate_failures do
-  #       expect(User.search_name(user.user_name)).to include(user)
-  #     end
-  #   end
-  # end
 
   describe User, '#full_name' do
     it 'returns the concatenated first and last names' do

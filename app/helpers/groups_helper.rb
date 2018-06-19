@@ -7,11 +7,11 @@ module GroupsHelper
   end
 
   def moderation_links_and_power(post)
-    current_user == post.user || current_user.role.name == 'admin' || (current_user.university_moderator?(post.postable.id) && !post.user.university_moderator?(post.postable.id))
+    current_user == post.user || current_user.role.name == 'admin' || (current_user.group_moderator?(post.postable.id) && !post.user.group_moderator?(post.postable.id))
   end
 
   def moderation_power(_user, group)
-    return true if current_user.role.name == 'admin' || current_user.university_moderator?(group.id)
+    return true if current_user.role.name == 'admin' || current_user.group_moderator?(group.id)
     false
   end
 end
