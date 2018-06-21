@@ -1,19 +1,5 @@
 # frozen_string_literal: true
 
-unless ENV['nocoverage']
-  require 'simplecov'
-  require 'simplecov-console'
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
-    [
-      SimpleCov::Formatter::HTMLFormatter,
-      SimpleCov::Formatter::Console
-    ]
-  )
-  SimpleCov.start 'rails' do
-    add_filter '/controllers/'
-  end
-end
-
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.syntax = [:expect, :should]

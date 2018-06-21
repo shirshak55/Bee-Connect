@@ -1,5 +1,20 @@
 # frozen_string_literal: true
 
+# Simplecov MUST be called before anything else
+unless ENV['nocoverage']
+  require 'simplecov'
+  require 'simplecov-console'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+    [
+      SimpleCov::Formatter::HTMLFormatter,
+      SimpleCov::Formatter::Console
+    ]
+  )
+  SimpleCov.start 'rails' do
+    add_filter '/controllers/'
+  end
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
