@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :message do
-    body {Faker::Hipster.paragraph(3)}
+    body { Faker::Hipster.paragraph(1) }
     association :user
-    chat_room_id 1
+    association :chat_room
   end
 end

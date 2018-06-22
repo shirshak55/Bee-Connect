@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PostsHelper
   def display_likes(post)
     votes = post.votes_for.up.by_type(User)
@@ -7,11 +9,11 @@ module PostsHelper
 
   def liked_post(post)
     if current_user.voted_for? post
-      return link_to '', [:unlike,post.postable,post], remote: true, id: "like_#{post.id}", 
-          class: "glyphicon glyphicon-heart"
+      link_to '', [:unlike, post.postable, post], remote: true, id: "like_#{post.id}",
+                                                  class: 'glyphicon glyphicon-heart'
     else
-      link_to '', [:like,post.postable,post], remote: true, id: "like_#{post.id}", 
-          class: "glyphicon glyphicon-heart-empty" 
+      link_to '', [:like, post.postable, post], remote: true, id: "like_#{post.id}",
+                                                class: 'glyphicon glyphicon-heart-empty'
     end
   end
 
@@ -21,8 +23,8 @@ module PostsHelper
   end
 
   def count_comments(post)
-    counter=post.comments.count
-    "#{counter} Comments" if counter==1 
+    counter = post.comments.count
+    "#{counter} Comments" if counter == 1
     "#{counter} Comment"
   end
 
@@ -30,11 +32,11 @@ module PostsHelper
 
   def list_likers(votes)
     user_name = []
-    unless votes.blank?
+    if votes.present?
       votes.voters.each do |voter|
-        user_name.push(link_to voter.user_name,
-                                profile_path(voter.user_name),
-                                class: 'user-name')
+        user_name.push(link_to(voter.user_name,
+                               profile_path(voter.user_name),
+                               class: 'user-name'))
       end
       user_name.to_sentence.html_safe + like_plural(votes)
     end

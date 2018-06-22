@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessageBroadcastJob < ApplicationJob
   queue_as :high_priority
 
@@ -7,7 +9,8 @@ class MessageBroadcastJob < ApplicationJob
   end
 
   private
+
   def render_message(message)
-    MessagesController.render partial: 'messages/message', locals: {message: message}
+    MessagesController.render partial: 'messages/message', locals: { message: message }
   end
 end

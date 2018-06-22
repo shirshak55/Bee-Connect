@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GroupChatsChannel < ApplicationCable::Channel
   def subscribed
     stream_from "group_chats_#{params['group_id']}_channel"
@@ -8,7 +10,7 @@ class GroupChatsChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    if(current_user.is_group_approved( data['group_id']) )
+    if current_user.group_approved?(data['group_id'])
       current_user.group_messages.create!(body: data['message'], group_id: data['group_id'])
     end
   end

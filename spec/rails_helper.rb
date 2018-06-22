@@ -1,6 +1,23 @@
+# frozen_string_literal: true
+
+# Simplecov MUST be called before anything else
+unless ENV['nocoverage']
+  require 'simplecov'
+  require 'simplecov-console'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+    [
+      SimpleCov::Formatter::HTMLFormatter,
+      SimpleCov::Formatter::Console
+    ]
+  )
+  SimpleCov.start 'rails' do
+    add_filter '/controllers/'
+  end
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'spec_helper'
@@ -8,7 +25,7 @@ require 'rspec/rails'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
-require "action_mailer"
+require 'action_mailer'
 require 'active_support/inflector'
 require 'capybara/email/rspec'
 require 'capybara/rails'
@@ -30,8 +47,7 @@ end
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
-require 'test_prof/recipes/rspec/any_fixture'
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -55,9 +71,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include Capybara::DSL
-
   config.include FactoryBot::Syntax::Methods
-
   config.include Devise::Test::IntegrationHelpers, type: :system
 
   config.run_all_when_everything_filtered = true

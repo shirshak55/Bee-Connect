@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ConversationJob < ApplicationJob
   queue_as :high_priority
 
@@ -9,8 +11,9 @@ class ConversationJob < ApplicationJob
   end
 
   private
+
   def render_message(personal_message)
     PersonalMessagesController.render partial: 'personal_messages/personal_message',
-                                      locals: {personal_message: personal_message}
+                                      locals: { personal_message: personal_message }
   end
 end

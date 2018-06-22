@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 RSpec.describe User, type: :model do
+  let!(:user) { FactoryBot.create(:user, first_name: 'Josh', last_name: 'Steiner') }
+
   context 'Model Associations' do
     it { is_expected.to belong_to(:role) }
 
@@ -19,7 +23,6 @@ RSpec.describe User, type: :model do
   end
 
   context 'Model Validations' do
-    subject { FactoryBot.create(:user) }
     it { is_expected.to validate_length_of(:first_name).is_at_least(2).is_at_most(50) }
     it { is_expected.to validate_length_of(:last_name).is_at_least(2).is_at_most(50) }
     it { is_expected.to validate_length_of(:user_name).is_at_least(2).is_at_most(50) }
@@ -30,7 +33,6 @@ RSpec.describe User, type: :model do
   end
 
   describe User, '#full_name' do
-    include_context 'user'
     it 'returns the concatenated first and last names' do
       expect(user.full_name).to eq 'Josh Steiner'
     end
