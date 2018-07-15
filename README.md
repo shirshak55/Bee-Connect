@@ -168,8 +168,7 @@ And thanks to other contributors also :)
 
 
 ## Donation
-Considering the hours spent on developing this project and you might have used it on production please show some small apperication to author by donations. Doner's name will be written on this repo as a mark of appreciation. I do accept cards payment, paypal but I am not writing it here. If you like to donate kindly message me at `bloggervista@gmail.com` .
-If you are bitcoin user you can send me donations at blockchain `1NJb7cqYqP3nbR5WDjdaVvaduXfg8KEsHG` or `ether` at `0xA583445Acf22604219037D31f2D163B877DAad08`
+If you would like to donate please contact me at bloggervista@gmail.com. I would also like to appreciate you thank you.
 
 ## How can I thank you?
 Why not star the github repo?
