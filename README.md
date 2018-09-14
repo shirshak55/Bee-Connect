@@ -32,7 +32,7 @@ An advance rails social netowrking system. Think like its is mini facebook with 
 > There are tons of feature . So I don't want to flood this with screenshots. Thanks
 
 ## Features
-* Latest version of Rail(v5.1.4)
+* Latest version of Rail(v5.2)
 * Login/Logout
 * Registration with password reset
 * Registration User Email Verifications
