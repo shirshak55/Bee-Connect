@@ -32,7 +32,7 @@ An advance rails social netowrking system. Think like its is mini facebook with 
 > There are tons of feature . So I don't want to flood this with screenshots. Thanks
 
 ## Features
-* Latest version of Rail(v5.2)
+* Latest version of Rails (v5.2.1)
 * Login/Logout
 * Registration with password reset
 * Registration User Email Verifications
@@ -144,7 +144,6 @@ Feel free to contribute and we are very happy to merge your PR.
 * Ability to Upload Videos
 * Adding emoticons support.
 * Ability to send weekly mails
-* Support to latest version of rails. (at the time or writing Rails 5.1)
 * Ability to create various form by admin like contact form etc.
 * Fully test with chrome headless browser and 90% code coverage
 * Advertisement support
@@ -154,9 +153,6 @@ Feel free to contribute and we are very happy to merge your PR.
 
 > Or you can PR us about these feature
 > Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
-
-## Support
-Latest version of rails will be supported.
 
 ## Security
 If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
