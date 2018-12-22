@@ -6,6 +6,8 @@
 An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
 
+(I would like to use rust on upcoming version using rocket as server. But this requires a lot of effort and financial budget if you would like to support please contact me shirshak55@gmail.com)
+
 # Screenshots
 
 ### Registration
