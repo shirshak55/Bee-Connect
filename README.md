@@ -3,10 +3,9 @@
 [![Build Status](https://travis-ci.org/bloggervista/Bee-Connect.svg?branch=master)](https://travis-ci.org/bloggervista/Bee-Connect) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![StyleCI](https://styleci.io/repos/107520275/shield?style=plastic)](https://styleci.io/repos/107520275/shield?style=plastic) [![Patreon donate button](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/shirshak "Donate to this project using Patreon")
 
 
-An advance rails social netowrking system. Think like its is mini facebook with live chat support. Features like  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
+An advance Ruby on Rails social networking application. It is like mini facebook having features like chat/groups etc. Notable features includes  group , group moderation, group chat, global chat, profile update, post, comments, favorites etc..
 
-
-(I would like to use rust on upcoming version using rocket as server. But this requires a lot of effort and financial budget if you would like to support please contact me shirshak55@gmail.com)
+This project can be used as an example of creating some complex Ruby on Rails app. 
 
 # Screenshots
 
@@ -133,46 +132,24 @@ Will be added soon
 If you are windows user we recommend you to use Cloud9 online IDE or use rails installer.
 
 ## Contribution
-Feel free to contribute and we are very happy to merge your PR.
-
-
-# Future of this project
-* Use Tabler as admin panel
-* Using webpack and use react js
-* Fully documentation for every parts
-* Social Login with facebook, github, twitter etc.
-* Fully Developed backend. Right now admin can only delete post he cannot monitor user
-* Roles and Permissions
-* Ability to Upload Videos
-* Adding emoticons support.
-* Ability to send weekly mails
-* Ability to create various form by admin like contact form etc.
-* Fully test with chrome headless browser and 90% code coverage
-* Advertisement support
-* Payments with leading provider like paypal, stripe.
-* API For mobile devices
-* JWT based authentication for mobile device
-
-> Or you can PR us about these feature
-> Please don't abuse this project by adding this to marketplace like codecanyon. Actually that really sucks :(
+We are very open to contribution. Feel free to contribute and we are very happy to merge your PR.
 
 ## Security
-If you discover any security related issue, please email `bloggervista@gmail.com` . All security issues will be addressed properly.
+If you discover any security related issue, please email `shirshak55[at]pm.me` . All security issues will be addressed properly.
 
 ## Contributors
+This project has been watered by various contribution and I would like to give them a big shoutout. Your contribution shall be remembered forever <3
 Lead Contributor: Gary Traffanstedt 
 
-And thanks to other contributors also :) 
-
-
-## Donation
-If you would like to donate please contact me at bloggervista@gmail.com. I would also like to appreciate you thank you.
+And thanks to other contributors also :)  For more info check contributor tab.
 
 ## How can I thank you?
 Why not star the github repo?
 
-Don't forget me to ask any questions via [facebook](https://facebook.com/iamshirshak)! or issue tab?
+Don't forget me to ask any questions via [twitter](https://twitter.com/shirshak55)! or issue tab?
 
-Thank you DHH and everybody at opensource.
+I would like to thank DHH for creating Ruby on Rails and all the maintainer of gems making this project possible. This project took like 1 month to build but it wouldn't be possible without the opensource technology.
 
+
+Thank You!
 Shirshak Bajgain
